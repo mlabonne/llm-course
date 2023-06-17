@@ -7,8 +7,8 @@ A list of notebooks and articles related to large language models.
 | Notebook | Description | Article | Notebook |
 |---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Decoding Strategies in Large Language Models | A guide to text generation from beam search to nucleus sampling | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Visualizing GPT-2's Loss Landscape | 3D plot of the loss landscape based on weight pertubations. | - | <a href="https://colab.research.google.com/drive/1Fu1jikJzFxnSPzR_V2JJyDVWWJNXssaL?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | [Article](https://) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| Visualizing GPT-2's Loss Landscape | 3D plot of the loss landscape based on weight pertubations. | <p align="center">-</p> | <a href="https://colab.research.google.com/drive/1Fu1jikJzFxnSPzR_V2JJyDVWWJNXssaL?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | <p align="center">-</p> | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 
 ## Roadmap
 
