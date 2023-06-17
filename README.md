@@ -16,6 +16,8 @@ A step-by-step guide on how to get into large language models with learning reso
 
 ![](images/roadmap.png)
 
+---
+
 ### 1. Mathematics for Machine Learning
 
 Before mastering machine learning, it is important to understand the fundamental mathematical concepts that power these algorithms.
@@ -32,6 +34,8 @@ Before mastering machine learning, it is important to understand the fundamental
 - [Khan Academy - Linear Algebra](https://www.khanacademy.org/math/linear-algebra): Great for beginners as it explains the concepts in a very intuitive way.
 - [Khan Academy - Calculus](https://www.khanacademy.org/math/calculus-1): An interactive course that covers all the basics of calculus.
 - [Khan Academy - Probability and Statistics](https://www.khanacademy.org/math/statistics-probability): Delivers the material in an easy-to-understand format.
+
+---
 
 ### 2. Python for Machine Learning
 
@@ -50,6 +54,8 @@ Python is a powerful and flexible programming language that's particularly good 
 - [freeCodeCamp - Machine Learning for Everybody](https://youtu.be/i_LwzRVP7bg): Practical introduction to different machine learning algorithms for beginners.
 - [Udacity - Intro to Machine Learning](https://www.udacity.com/course/intro-to-machine-learning--ud120): Free course that covers PCA and several other machine learning concepts.
 
+---
+
 ### 3. Neural Networks
 
 Neural networks are a fundamental part of many machine learning models, particularly in the realm of deep learning. To utilize them effectively, a comprehensive understanding of their design and mechanics is essential.
@@ -65,6 +71,8 @@ Neural networks are a fundamental part of many machine learning models, particul
 - [freeCodeCamp - Deep Learning Crash Course](https://www.youtube.com/watch?v=VyWAvY2CF9c): This video efficiently introduces all the most important concepts in deep learning.
 - [Fast.ai - Practical Deep Learning](https://course.fast.ai/): Free course designed for people with coding experience who want to learn about deep learning.
 - [Patrick Loeber - PyTorch Tutorials](https://www.youtube.com/playlist?list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4): Series of videos for complete beginners to learn about PyTorch.
+
+---
 
 ### 4. Natural Language Processing (NLP)
 
@@ -83,6 +91,8 @@ NLP is a fascinating branch of artificial intelligence that bridges the gap betw
 - [Jake Tae - PyTorch RNN from Scratch](https://jaketae.github.io/study/pytorch-rnn/): Practical and simple implementation of RNN, LSTM, and GRU models in PyTorch.
 - [colah's blog - Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/): A more theoretical article about the LSTM network.
 
+---
+
 ### 5. The Transformer Architecture
 
 The Transformer model, introduced in the "Attention is All You Need" paper, is a type of neural network architecture at the core of large language models.
@@ -99,6 +109,8 @@ The Transformer model, introduced in the "Attention is All You Need" paper, is a
 - [Harvard - The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/): An excellent in-depth article about the original Transformer paper.
 - [Introduction to the Transformer by Rachel Thomas](https://www.youtube.com/watch?v=AFkGPmU16QA): Provides a good intuition behind the main ideas of the Transformer architecture.
 - [Stanford CS224N - Transformers](https://www.youtube.com/watch?v=ptuGllU5SQQ): A more academic presentation of this architecture.
+
+---
 
 ### 6. Pre-trained Language Models
 
@@ -118,6 +130,8 @@ Pre-trained models like BERT, GPT-2, and T5 are powerful tools that can handle t
 - [Hugging Face - Transformers Notebooks](https://huggingface.co/docs/transformers/notebooks): List of official notebooks provided by Hugging Face.
 - [Hugging Face - Metrics](https://huggingface.co/metrics): All metrics on the Hugging Face hub.
 
+---
+
 ### 7. Advanced Language Modeling
 
 To fine-tune your skills, learn how to create embeddings with sentence transformers, store them in a vector database, and use parameter-efficient supervised learning or RLHF to fine-tune LLMs.
@@ -133,6 +147,8 @@ To fine-tune your skills, learn how to create embeddings with sentence transform
 - [Hugging Face - RLHF](https://huggingface.co/blog/rlhf): Blog post introducing the concept of RLHF.
 - [Hugging Face - PEFT](https://huggingface.co/blog/peft): Another library from Hugging Face implementing different techniques, such as LoRA.
 - [Efficient LLM training by Phil Schmid](https://www.philschmid.de/fine-tune-flan-t5-peft): Implementation of LoRA to fine-tune a Flan-T5 model.
+
+---
 
 ### 8. LMOps
 
@@ -150,5 +166,7 @@ Finally, dive into Language Model Operations (LMOps), learning how to handle pro
 - [Kanaries - AutoGPTQ](https://docs.kanaries.net/tutorials/ChatGPT/auto-gptq): Simple guide to use AutoGPTQ.
 - [Pinecone - LangChain AI Handbook](https://www.pinecone.io/learn/langchain-intro/): Excellent free book on how to master the LangChain library.
 - [A Primer to using LlamaIndex](https://gpt-index.readthedocs.io/en/latest/guides/primer.html): Official guides to learn more about LlamaIndex.
+
+---
 
 *Disclaimer: I am not affiliated with any sources listed here. This roadmap was inspired by the excellent [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) from Milan Milanović and Romano Roth.*
