@@ -14,7 +14,7 @@ A list of notebooks and articles related to large language models.
 
 A step-by-step guide on how to get into large language models with learning resources.
 
-![roadmap.png]()
+![](images/roadmap.png)
 
 ### 1. Mathematics for Machine Learning
 
@@ -151,4 +151,4 @@ Finally, dive into Language Model Operations (LMOps), learning how to handle pro
 - [Pinecone - LangChain AI Handbook](https://www.pinecone.io/learn/langchain-intro/): Excellent free book on how to master the LangChain library.
 - [A Primer to using LlamaIndex](https://gpt-index.readthedocs.io/en/latest/guides/primer.html): Official guides to learn more about LlamaIndex.
 
-*Disclaimer: I am not affiliated with any sources listed here. This roadmap was inspired by the excellent [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) from @milanm.*
+*Disclaimer: I am not affiliated with any sources listed here. This roadmap was inspired by the excellent [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) from Milan Milanović and Romano Roth.*
