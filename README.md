@@ -1,4 +1,4 @@
-# Large Language Model Course
+# 🗣️ Large Language Model Course
 
 ## Notebooks
 
@@ -23,13 +23,14 @@ A step-by-step guide on how to get into large language models with learning reso
 Before mastering machine learning, it is important to understand the fundamental mathematical concepts that power these algorithms.
 
 - **Linear Algebra**: This is crucial for understanding many algorithms, especially those used in deep learning. Key concepts include vectors, matrices, determinants, eigenvalues and eigenvectors, vector spaces, and linear transformations.
-- **Calculus**: Many machine learning algorithms involve optimization of continuous functions, which requires an understanding of derivatives, integrals, limits, and series. Multivariable calculus and the concept of gradients are also important.
+- **Calculus**: Many machine learning algorithms involve the optimization of continuous functions, which requires an understanding of derivatives, integrals, limits, and series. Multivariable calculus and the concept of gradients are also important.
 - **Probability and Statistics**: These are crucial for understanding how models learn from data and make predictions. Key concepts include probability theory, random variables, probability distributions, expectations, variance, covariance, correlation, hypothesis testing, confidence intervals, maximum likelihood estimation, and Bayesian inference.
 
 📚 Resources:
 
 - [3Blue1Brown - The Essence of Linear Algebra](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab): Series of videos that give a geometric intuition to these concepts.
 - [StatQuest with Josh Starmer - Statistics Fundamentals](https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9): Offers simple and clear explanations for many statistical concepts.
+- [AP Statistics Intuition by Ms Aerin](https://automata88.medium.com/list/cacc224d5e7d): List of Medium articles that provide the intuition behind every probability distribution.
 - [Immersive Linear Algebra](https://immersivemath.com/ila/learnmore.html): Another visual interpretation of linear algebra.
 - [Khan Academy - Linear Algebra](https://www.khanacademy.org/math/linear-algebra): Great for beginners as it explains the concepts in a very intuitive way.
 - [Khan Academy - Calculus](https://www.khanacademy.org/math/calculus-1): An interactive course that covers all the basics of calculus.
@@ -43,7 +44,7 @@ Python is a powerful and flexible programming language that's particularly good 
 
 - **Python Basics**: Understanding of Python's basic syntax, data types, error handling, and object-oriented programming is crucial.
 - **Data Science Libraries**: Familiarity with NumPy for numerical operations, Pandas for data manipulation and analysis, Matplotlib and Seaborn for data visualization is a must.
-- **Data Preprocessing**: This involves feature scaling and normalization, handling missing data, categorical data encoding, and splitting data into training, validation, and test sets.
+- **Data Preprocessing**: This involves feature scaling and normalization, handling missing data, outlier detection, categorical data encoding, and splitting data into training, validation, and test sets.
 - **Machine Learning Libraries**: Proficiency with Scikit-learn, a library providing a wide selection of supervised and unsupervised learning algorithms, is vital. Understanding how to implement algorithms like linear regression, logistic regression, decision trees, random forests, k-nearest neighbors (K-NN), and K-means clustering is important. Dimensionality reduction techniques like PCA and t-SNE are also very helpful for visualizing high-dimensional data.
 
 📚 Resources:
@@ -95,7 +96,7 @@ NLP is a fascinating branch of artificial intelligence that bridges the gap betw
 
 ### 5. The Transformer Architecture
 
-The Transformer model, introduced in the "Attention is All You Need" paper, is a type of neural network architecture at the core of large language models.
+The Transformer model, introduced in the "Attention is All You Need" paper, is the neural network architecture at the core of large language models. The original paper is difficult to read and eveb contains some mistakes, which is why alternative resources are recommended.
 
 - **Attention Mechanisms**: Grasp the theory behind attention mechanisms, including self-attention and scaled dot-product attention, which allows the model to focus on different parts of the input when producing an output.
 - **Tokenization**: Understand how to convert raw text data into a format that the model can understand, which involves splitting the text into tokens (usually words or subwords).
@@ -116,7 +117,7 @@ The Transformer model, introduced in the "Attention is All You Need" paper, is a
 
 Pre-trained models like BERT, GPT-2, and T5 are powerful tools that can handle tasks like sequence classification, text generation, text summarization, and question answering.
 
-- **BERT**: Understand the architecture of BERT, including the concept of bidirectional training, which distinguishes it from previous models. Learn about fine-tuning BERT for tasks like sequence classification, named entity recognition, and question answering.
+- **BERT**: Understand BERT's architecture, including the concept of bidirectional training, which distinguishes it from previous models. Learn about fine-tuning BERT for tasks like sequence classification, named entity recognition, and question answering.
 - **GPT-2**: Understand GPT-2's decoder-only architecture and its pre-training objective. Learn to use it for text generation.
 - **T5**: the T5 model is a highly versatile model for tasks ranging from text classification to translation to summarization. Understand how to train and use T5 for multiple tasks, and learn about the "prefix-tuning" approach used with T5.
 - **LLM Evaluation**: Learn how to evaluate the performance of these models on your specific task, including appropriate metrics for different tasks such as accuracy, F1 score, BLEU score, or perplexity.
@@ -152,11 +153,11 @@ To fine-tune your skills, learn how to create embeddings with sentence transform
 
 ### 8. LMOps
 
-Finally, dive into Language Model Operations (LMOps), learning how to handle prompt engineering, build frameworks with Langchain and Llamaindex, and optimize inference with weight quantization, pruning, distillation, and more.
+Finally, dive into Language Model Operations (LMOps), learn how to handle prompt engineering, build frameworks with Langchain and Llamaindex, and optimize inference with weight quantization, pruning, distillation, and more.
 
-- **Fine-tuning LLaMA**: Instruction fine-tuning has become extremely popular since the (accidental) release of LLaMA. The size of these models and the peculiarities of training them on questions and answers introduce more complexity and often require paramter-efficient learning tehcniques.
-- **Build LLM Frameworks**: LLMs are a new building block in system design, where the rest of the architecture is handled by libraries such as LangChain and LlamaIndex, allowing you to query vector databases, improving the model's memory, or providing various tools.
-- **Optimization Techniques for Inference**: As the size of LLMs grow, it becomes increasingly important to apply optimization techniques to ensure that the models can be efficiently used for inference. Techniques include weight quantization (4-bit, 3-bit), pruning, knowledge distillation, etc.
+- **Fine-tuning LLaMA**: Instruction fine-tuning has become extremely popular since the (accidental) release of LLaMA. The size of these models and the peculiarities of training them on questions and answers introduce more complexity and often require parameter-efficient learning techniques.
+- **Build LLM Frameworks**: LLMs are a new building block in system design, where the rest of the architecture is handled by libraries such as LangChain and LlamaIndex, allowing you to query vector databases, improving the model's memory or providing various tools.
+- **Optimization Techniques for Inference**: As the size of LLMs grows, it becomes increasingly important to apply optimization techniques to ensure that the models can be efficiently used for inference. Techniques include weight quantization (4-bit, 3-bit), pruning, knowledge distillation, etc.
 
 📚 Resources:
 
@@ -169,4 +170,10 @@ Finally, dive into Language Model Operations (LMOps), learning how to handle pro
 
 ---
 
-*Disclaimer: I am not affiliated with any sources listed here. This roadmap was inspired by the excellent [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) from Milan Milanović and Romano Roth.*
+### Acknowledgements
+
+This roadmap was inspired by the excellent [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) from Milan Milanović and Romano Roth.
+
+Special thanks to André Frade for his input and review of the first draft of this roadmap.
+
+*Disclaimer: I am not affiliated with any sources listed here.*
