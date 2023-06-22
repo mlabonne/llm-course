@@ -138,7 +138,7 @@ Pre-trained models like BERT, GPT-2, and T5 are powerful tools that can handle t
 To fine-tune your skills, learn how to create embeddings with sentence transformers, store them in a vector database, and use parameter-efficient supervised learning or RLHF to fine-tune LLMs.
 
 - **Sentence Transformers**: Sentence Transformers are models that can derive semantically meaningful embeddings for sentences, paragraphs, or texts. Learn how to store and retrieve these embeddings using an appropriate vector database for rapid similarity search.
-- **Fine-Tuning Language Models**: After understanding and using pre-trained models, the next step is to fine-tune them on a domain-specific dataset. It allows the model to be more accurate for certain tasks or domains, such as medical text analysis or sentiment analysis for movie reviews.
+- **Fine-Tuning Language Models**: After understanding and using pre-trained models, the next step is fine-tuning them on a domain-specific dataset. It allows the model to be more accurate for certain tasks or domains, such as medical text analysis or sentiment analysis for movie reviews.
 - **Parameter-Efficient Learning Techniques**: Explore more efficient ways to train or fine-tune your models without requiring massive amounts of data or computational resources, such as LoRA.
 
 📚 Resources:
@@ -155,9 +155,10 @@ To fine-tune your skills, learn how to create embeddings with sentence transform
 
 Finally, dive into Language Model Operations (LMOps), learn how to handle prompt engineering, build frameworks with Langchain and Llamaindex, and optimize inference with weight quantization, pruning, distillation, and more.
 
-- **Fine-tuning LLaMA**: Instruction fine-tuning has become extremely popular since the (accidental) release of LLaMA. The size of these models and the peculiarities of training them on questions and answers introduce more complexity and often require parameter-efficient learning techniques.
+- **Fine-tuning LLaMA**: Instruction fine-tuning has become extremely popular since the (accidental) release of LLaMA. The size of these models and the peculiarities of training them on instructions and answers introduce more complexity and often require parameter-efficient learning techniques such as QLoRA.
 - **Build LLM Frameworks**: LLMs are a new building block in system design, where the rest of the architecture is handled by libraries such as LangChain and LlamaIndex, allowing you to query vector databases, improving the model's memory or providing various tools.
 - **Optimization Techniques for Inference**: As the size of LLMs grows, it becomes increasingly important to apply optimization techniques to ensure that the models can be efficiently used for inference. Techniques include weight quantization (4-bit, 3-bit), pruning, knowledge distillation, etc.
+- **LLM deployment**: These models can be deployed locally like [llama.cpp](https://github.com/ggerganov/llama.cpp) or in the cloud like Hugging Face's [text generation inference](https://github.com/huggingface/text-generation-inference) or [vLLM](https://github.com/vllm-project/vllm).
 
 📚 Resources:
 
@@ -165,6 +166,7 @@ Finally, dive into Language Model Operations (LMOps), learn how to handle prompt
 - [Hugging Face - LLM.int8()](https://huggingface.co/blog/hf-bitsandbytes-integration): Introduction to 8-bit matrix multiplication with LLM.int8().
 - [Hugging Face - QLoRA](https://huggingface.co/blog/4bit-transformers-bitsandbytes): Blog post introducing QLoRA with notebooks to test it.
 - [Kanaries - AutoGPTQ](https://docs.kanaries.net/tutorials/ChatGPT/auto-gptq): Simple guide to use AutoGPTQ.
+- [Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/): overview of the LLM app stack.
 - [Pinecone - LangChain AI Handbook](https://www.pinecone.io/learn/langchain-intro/): Excellent free book on how to master the LangChain library.
 - [A Primer to using LlamaIndex](https://gpt-index.readthedocs.io/en/latest/guides/primer.html): Official guides to learn more about LlamaIndex.
 
@@ -174,6 +176,6 @@ Finally, dive into Language Model Operations (LMOps), learn how to handle prompt
 
 This roadmap was inspired by the excellent [DevOps Roadmap](https://github.com/milanm/DevOps-Roadmap) from Milan Milanović and Romano Roth.
 
-Special thanks to André Frade for his input and review of the first draft of this roadmap.
+Special thanks to Thomas Thelen for motivating me to create a roadmap, and André Frade for his input and review of the first draft.
 
 *Disclaimer: I am not affiliated with any sources listed here.*
