@@ -155,9 +155,9 @@ To fine-tune your skills, learn how to create embeddings with sentence transform
 
 ---
 
-### 8. LMOps
+### 8. LLMOps
 
-Finally, dive into Language Model Operations (LMOps), learn how to handle prompt engineering, build frameworks with Langchain and Llamaindex, and optimize inference with weight quantization, pruning, distillation, and more.
+Finally, dive into Large Language Model Operations (LLMOps), learn how to handle prompt engineering, build frameworks with LangChain and Llamaindex, and optimize inference with weight quantization, pruning, distillation, and more.
 
 - **Fine-tuning LLaMA**: Instruction fine-tuning has become extremely popular since the (accidental) release of LLaMA. The size of these models and the peculiarities of training them on instructions and answers introduce more complexity and often require parameter-efficient learning techniques such as QLoRA.
 - **Build LLM Frameworks**: LLMs are a new building block in system design, where the rest of the architecture is handled by libraries such as LangChain and LlamaIndex, allowing you to query vector databases, improving the model's memory or providing various tools.
