@@ -11,6 +11,7 @@ A list of notebooks and articles related to large language models.
 | Visualizing GPT-2's Loss Landscape | 3D plot of the loss landscape based on weight pertubations. | [Tweet](https://twitter.com/maximelabonne/status/1667618081844219904) | <a href="https://colab.research.google.com/drive/1Fu1jikJzFxnSPzR_V2JJyDVWWJNXssaL?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | Create a 4-bit GPT-2 model using AutoGPTQ | Quick notebook to quantize LLMs and upload them to the HF Hub. | [Tweet](https://twitter.com/maximelabonne/status/1672205530717122561) | <a href="https://colab.research.google.com/drive/1P6JEAdwfMtGP92aQCLUuMdsSnuxBUxvQ?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune Llama 2 in Google Colab | Fine-tune a Llama 2 model on an HF dataset and upload it to the HF Hub. | [Tweet](https://twitter.com/maximelabonne/status/1681791164083576833) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 
 
 ## Roadmap
