@@ -1,5 +1,11 @@
 # 🗣️ Large Language Model Course
 
+The LLM course is divided into three parts:
+
+1. 🧩 **LLM Fundamentals**: this part covers essential knowledge about mathematics, Python, and neural networks.
+2. 🧑‍🔬 **The LLM Scientist**: this part focuses on learning how to build the best possible LLMs using the latest techniques
+3. 👷 **The LLM Engineer**: this part focuses on how to create LLM-based solutions and deploy them.
+
 ## Notebooks
 
 A list of notebooks and articles related to large language models.
@@ -15,13 +21,9 @@ A list of notebooks and articles related to large language models.
 | Quantize Llama models with GGML and llama.cpp | Quantize Llama 2 models with llama.cpp and upload GGUF to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | ExLlamaV2: The Fastest Library to Run LLMs | Quantize and run EXL2 models and upload them to the HF Hub. | [Article]() | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 
-## Roadmap
+## 🧩 LLM Fundamentals
 
-A step-by-step guide on how to get into large language models with learning resources.
-
-![](images/roadmap.png)
-
----
+![](images/roadmap_fundamentals.png)
 
 ### 1. Mathematics for Machine Learning
 
@@ -97,85 +99,151 @@ NLP is a fascinating branch of artificial intelligence that bridges the gap betw
 - [Jake Tae - PyTorch RNN from Scratch](https://jaketae.github.io/study/pytorch-rnn/): Practical and simple implementation of RNN, LSTM, and GRU models in PyTorch.
 - [colah's blog - Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/): A more theoretical article about the LSTM network.
 
----
+## 🧑‍🔬 The LLM Scientist
 
-### 5. The Transformer Architecture
+![](images/roadmap_scientist.png)
 
-The Transformer model, introduced in the "Attention is All You Need" paper, is the neural network architecture at the core of large language models. The original paper is difficult to read and eveb contains some mistakes, which is why alternative resources are recommended.
+### 1. The LLM architecture
 
-- **Attention Mechanisms**: Grasp the theory behind attention mechanisms, including self-attention and scaled dot-product attention, which allows the model to focus on different parts of the input when producing an output.
-- **Tokenization**: Understand how to convert raw text data into a format that the model can understand, which involves splitting the text into tokens (usually words or subwords).
-- **Transformer Architecture**: Dive deeper into the architecture of Transformers, learning about their various components such as positional encoding, multi-head attention, feed-forward networks, and normalization layers.
-- **Decoding Strategies**: Learn about the different ways the model can generate output sequences. Common strategies include greedy decoding, beam search, and top-k sampling.
+While an in-depth knowledge about the Transformer architecture is not required, it is important to have a good understanding of its inputs (tokens) and outputs (logits). The vanilla attention mechanism is another crucial component to master, as improved versions of it are introduced later on.
 
-📚 Resources:
+* **High-level view**: Revisit the encoder-decoder Transformer architecture, and more specifically the decoder-only GPT architecture, which is used in every modern LLM.
+* **Tokenization**: Understand how to convert raw text data into a format that the model can understand, which involves splitting the text into tokens (usually words or subwords).
+* **Attention mechanisms**: Grasp the theory behind attention mechanisms, including self-attention and scaled dot-product attention, which allows the model to focus on different parts of the input when producing an output.
+* **Text generation**: Learn about the different ways the model can generate output sequences. Common strategies include greedy decoding, beam search, top-k sampling, and nucleus sampling.
 
-- [The Illustrated Transformer by Jay Alammar](https://jalammar.github.io/illustrated-transformer/): This is a visual and intuitive explanation of the Transformer model.
-- [Hugging Face - NLP Course](https://huggingface.co/learn/nlp-course/): An excellent mini-course that goes beyond the Transformer architecture.
-- [Harvard - The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/): An excellent in-depth article about the original Transformer paper.
-- [Introduction to the Transformer by Rachel Thomas](https://www.youtube.com/watch?v=AFkGPmU16QA): Provides a good intuition behind the main ideas of the Transformer architecture.
-- [Stanford CS224N - Transformers](https://www.youtube.com/watch?v=ptuGllU5SQQ): A more academic presentation of this architecture.
-
----
-
-### 6. Pre-trained Language Models
-
-Pre-trained models like BERT, GPT-2, and T5 are powerful tools that can handle tasks like sequence classification, text generation, text summarization, and question answering.
-
-- **BERT**: Understand BERT's architecture, including the concept of bidirectional training, which distinguishes it from previous models. Learn about fine-tuning BERT for tasks like sequence classification, named entity recognition, and question answering.
-- **GPT-2**: Understand GPT-2's decoder-only architecture and its pre-training objective. Learn to use it for text generation.
-- **T5**: the T5 model is a highly versatile model for tasks ranging from text classification to translation to summarization. Understand how to train and use T5 for multiple tasks, and learn about the "prefix-tuning" approach used with T5.
-- **LLM Evaluation**: Learn how to evaluate the performance of these models on your specific task, including appropriate metrics for different tasks such as accuracy, F1 score, BLEU score, or perplexity.
-
-📚 Resources:
-
-- [The Illustrated BERT by Jay Alammar](https://jalammar.github.io/illustrated-bert/): Another excellent visual guide to the BERT architecture.
-- [Hugging Face - BERT](https://huggingface.co/docs/transformers/v4.30.0/en/model_doc/bert#overview): Overview and list of practical resources for various tasks.
-- [The Illustrated GPT-2 by Jay Alammar](https://jalammar.github.io/illustrated-gpt2/): In-depth illustrated guide to the GPT-2 architecture.
-- [T5 paper](https://arxiv.org/abs/1910.10683): The original paper that introduced the T5 model and many essential concepts for modern NLP.
-- [Hugging Face - Transformers Notebooks](https://huggingface.co/docs/transformers/notebooks): List of official notebooks provided by Hugging Face.
-- [Hugging Face - Metrics](https://huggingface.co/metrics): All metrics on the Hugging Face hub.
+📚 **References**:
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar: A visual and intuitive explanation of the Transformer model.
+- [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/) by Jay Alammar: Even more important than the previous article, it is focused on the GPT architecture, which is very similar to Llama's.
+* [nanoGPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) by Andrej Karpathy: A 2h-long YouTube video to reimplement GPT from scratch (for programmers).
+* [Attention? Attention!](https://lilianweng.github.io/posts/2018-06-24-attention/) by Lilian Weng: Introduce the need for attention in a more formal way.
+* [Decoding Strategies in LLMs](https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html): Provide code and a visual introduction to the different decoding strategies to generate text.
 
 ---
+### 2. Building an instruction dataset
 
-### 7. Advanced Language Modeling
+While it's easy to find raw data from Wikipedia and other websites, it's difficult to collect pairs of instructions and answers in the wild. Like in traditional machine learning, the quality of the dataset will directly influence the quality of the model, which is why it might be the most important component in the fine-tuning process.
 
-To fine-tune your skills, learn how to create embeddings with sentence transformers, store them in a vector database, and use parameter-efficient supervised learning or RLHF to fine-tune LLMs.
+* **[Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)-like dataset**: Generate synthetic data from scratch with the OpenAI API (GPT). You can specify seeds and system prompts to create a diverse dataset.
+* **Advanced techniques**: Learn how to improve existing datasets with [Evol-Instruct](https://arxiv.org/abs/2304.12244), how to generate high-quality synthetic data like in the [Orca](https://arxiv.org/abs/2306.02707) and [phi-1](https://arxiv.org/abs/2306.11644) papers.
+* **Filtering data**: Traditional techniques involving regex, removing near-duplicates, focusing on answers with a high number of tokens, etc.
+* **Prompt templates**: There's no true standard way of formatting instructions and answers, which is why it's important to know about the different chat templates, such as [ChatML](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?tabs=python&pivots=programming-language-chat-ml), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), etc.
 
-- **Sentence Transformers**: Sentence Transformers are models that can derive semantically meaningful embeddings for sentences, paragraphs, or texts. Learn how to store and retrieve these embeddings using an appropriate vector database for rapid similarity search.
-- **Fine-Tuning Language Models**: After understanding and using pre-trained models, the next step is fine-tuning them on a domain-specific dataset. It allows the model to be more accurate for certain tasks or domains, such as medical text analysis or sentiment analysis for movie reviews.
-- **Parameter-Efficient Learning Techniques**: Explore more efficient ways to train or fine-tune your models without requiring massive amounts of data or computational resources, such as LoRA.
-
-📚 Resources:
-
-- [SBERT.net](https://www.sbert.net/): Python library to implement sentence transformers, with a lot of examples.
-- [Pinecone - Sentence Transformers](https://www.pinecone.io/learn/sentence-embeddings/): Mini-book about NLP for semantic search in general.
-- [Hugging Face - RLHF](https://huggingface.co/blog/rlhf): Blog post introducing the concept of RLHF.
-- [Hugging Face - PEFT](https://huggingface.co/blog/peft): Another library from Hugging Face implementing different techniques, such as LoRA.
-- [Efficient LLM training by Phil Schmid](https://www.philschmid.de/fine-tune-flan-t5-peft): Implementation of LoRA to fine-tune a Flan-T5 model.
-
----
-
-### 8. LLMOps
-
-Finally, dive into Large Language Model Operations (LLMOps), learn how to handle prompt engineering, build frameworks with LangChain and Llamaindex, and optimize inference with weight quantization, pruning, distillation, and more.
-
-- **Fine-tuning LLaMA**: Instruction fine-tuning has become extremely popular since the (accidental) release of LLaMA. The size of these models and the peculiarities of training them on instructions and answers introduce more complexity and often require parameter-efficient learning techniques such as QLoRA.
-- **Build LLM Frameworks**: LLMs are a new building block in system design, where the rest of the architecture is handled by libraries such as LangChain and LlamaIndex, allowing you to query vector databases, improving the model's memory or providing various tools.
-- **Optimization Techniques for Inference**: As the size of LLMs grows, it becomes increasingly important to apply optimization techniques to ensure that the models can be efficiently used for inference. Techniques include weight quantization (4-bit, 3-bit), pruning, knowledge distillation, etc.
-- **LLM deployment**: These models can be deployed locally like [llama.cpp](https://github.com/ggerganov/llama.cpp) or in the cloud like Hugging Face's [text generation inference](https://github.com/huggingface/text-generation-inference) or [vLLM](https://github.com/vllm-project/vllm).
-
-📚 Resources:
-
-- [MLExpert - Fine-tuning Alpaca](https://www.mlexpert.io/machine-learning/tutorials/alpaca-fine-tuning): Guide to fine-tune LLaMA on a custom dataset.
-- [Hugging Face - LLM.int8()](https://huggingface.co/blog/hf-bitsandbytes-integration): Introduction to 8-bit matrix multiplication with LLM.int8().
-- [Hugging Face - QLoRA](https://huggingface.co/blog/4bit-transformers-bitsandbytes): Blog post introducing QLoRA with notebooks to test it.
-- [Kanaries - AutoGPTQ](https://docs.kanaries.net/tutorials/ChatGPT/auto-gptq): Simple guide to use AutoGPTQ.
-- [Emerging Architectures for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/): overview of the LLM app stack.
-- [Pinecone - LangChain AI Handbook](https://www.pinecone.io/learn/langchain-intro/): Excellent free book on how to master the LangChain library.
-- [A Primer to using LlamaIndex](https://gpt-index.readthedocs.io/en/latest/guides/primer.html): Official guides to learn more about LlamaIndex.
+📚 **References**:
+* [Preparing a Dataset for Instruction tuning](https://wandb.ai/capecape/alpaca_ft/reports/How-to-Fine-Tune-an-LLM-Part-1-Preparing-a-Dataset-for-Instruction-Tuning--Vmlldzo1NTcxNzE2) by Thomas Capelle: Exploration of the Alpaca and Alpaca-GPT4 datasets and how to format them.
+* [Generating a Clinical Instruction Dataset](https://medium.com/mlearning-ai/generating-a-clinical-instruction-dataset-in-portuguese-with-langchain-and-gpt-4-6ee9abfa41ae) by Solano Todeschini: Tutorial on how to create a synthetic instruction dataset using GPT-4. 
+* [GPT 3.5 for news classification](https://medium.com/@kshitiz.sahay26/how-i-created-an-instruction-dataset-using-gpt-3-5-to-fine-tune-llama-2-for-news-classification-ed02fe41c81f) by Kshitiz Sahay: Use GPT 3.5 to create an instruction dataset to fine-tune Llama 2 for news classification.
+* [Dataset creation for fine-tuning LLM](https://colab.research.google.com/drive/1GH8PW9-zAe4cXEZyOIE-T9uHXblIldAg?usp=sharing): Notebook that contains a few techniques to filter a dataset and upload the result.
+* [Chat Template](https://huggingface.co/blog/chat-templates) by Matthew Carrigan: Hugging Face's page about prompt templates
 
 ---
+### 3. Pre-training models
+
+Pre-training is a very long and costly process, which is why this is not the focus of this course. It's good to have some level of understanding of what happens during pre-training, but hands-on experience is not required.
+
+* **Data pipeline**: Pre-training requires huge datasets (e.g., [Llama 2](https://arxiv.org/abs/2307.09288) was trained on 2 trillion tokens) that need to be filtered, tokenized, and collated with a pre-defined vocabulary.
+* **Causal language modeling**: Learn the difference between causal and masked language modeling, as well as the loss function used in this case.
+* **Scaling laws**: The [scaling laws](https://arxiv.org/pdf/2001.08361.pdf) describe the expected model performance based on the model size, dataset size, and the amount of compute used for training.
+* **High-Performance Computing**: Out of scope here, but more knowledge about HPC is fundamental if you're planning to create your own LLM from scratch (hardware, distributed workload, etc.).
+
+📚 **References**:
+* [LLMDataHub](https://github.com/Zjh-819/LLMDataHub) by Junhao Zhao: Curated list of datasets for pre-training, fine-tuning, and RLHF.
+* [Training a causal language model from scratch](https://huggingface.co/learn/nlp-course/chapter7/6?fw=pt) by Hugging Face: Pre-train a GPT-2 model from scratch using the transformers library.
+* [TinyLlama](https://github.com/jzhang38/TinyLlama) by Zhang et al.: Check this project to get a good understanding of how a Llama model is trained from scratch.
+* [Causal language modeling](# Causal language modeling) by Hugging Face: Explain the difference between causal and masked language modeling and how to quickly fine-tune a DistilGPT-2 model.
+* [Chinchilla's wild implications](https://www.lesswrong.com/posts/6Fpvch8RR29qLEWNH/chinchilla-s-wild-implications) by nostalgebraist: Discuss the scaling laws and explain what they mean to LLMs in general.
+* [BLOOM](https://bigscience.notion.site/BLOOM-BigScience-176B-Model-ad073ca07cdf479398d5f95d88e218c4) by BigScience: Notion pages that describes how the BLOOM model was built, with a lot of useful information about the engineering part and the problems that were encountered.
+* [OPT-175 Logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) by Meta: Research logs showing what went wrong and what went right. Useful if you're planning to pre-train a very large language model (in this case, 175B parameters).
+
+---
+### 4. Supervised Fine-Tuning
+
+Pre-trained models are only trained on a next-token prediction task, which is why they're not helpful assistants. SFT allows you to tweak them into responding to instructions. Moreover, it allows you to fine-tune your model on any data (private, not seen by GPT-4, etc.) and use it without having to pay for an API like OpenAI's.
+
+* **Full fine-tuning**: Full fine-tuning refers to training all the parameters in the model. It is not an efficient technique, but it produces slightly better results.
+* [**LoRA**](https://arxiv.org/abs/2106.09685): A parameter-efficient technique (PEFT) based on low-rank adapters. Instead of training all the parameters, we only train these adapters.
+* [**QLoRA**](https://arxiv.org/abs/2305.14314): Another PEFT based on LoRA, which also quantizes the weights of the model in 4 bits and introduce paged optimizers to manage memory spikes.
+* **[Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl)**: A user-friendly and powerful fine-tuning tool that is used in a lot of state-of-the-art open-source models.
+* [**DeepSpeed**](https://www.deepspeed.ai/): Efficient pre-training and fine-tuning of LLMs for multi-GPU and multi-node settings (implemented in Axolotl).
+
+📚 **References**:
+* [The Novice's LLM Training Guide](https://rentry.org/llm-training) by Alpin: Overview of the main concepts and parameters to consider when fine-tuning LLMs.
+* [LoRA insights](https://lightning.ai/pages/community/lora-insights/) by Sebastian Raschka: Practical insights about LoRA and how to select the best parameters.
+* [Fine-Tune Your Own Llama 2 Model](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html): Hands-on tutorial on how to fine-tune a Llama 2 model using Hugging Face libraries.
+* [Padding Large Language Models](https://towardsdatascience.com/padding-large-language-models-examples-with-llama-2-199fb10df8ff) by Benjamin Marie: Best practices to pad training examples for causal LLMs
+* [A Beginner's Guide to LLM Fine-Tuning](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html): Tutorial on how to fine-tune a CodeLlama model using Axolotl.
+
+---
+### 5. Reinforcement Learning from Human Feedback
+
+After supervised fine-tuning, RLHF is a step used to align the LLM's answers with human expectations. The idea is to learn preferences from human (or artificial) feedback, which can be used to reduce biases, censor models, or make them act in a more useful way. It is more complex than SFT and often seen as optional.
+
+* **Preference datasets**: These datasets typically contain several answers with some kind of ranking, which makes them more difficult to produce than instruction datasets.
+* [**Proximal Policy Optimization**](https://arxiv.org/abs/1707.06347): This algorithm leverages a reward model that predicts whether a given text is highly ranked by humans. This prediction is then used to optimize the SFT model with a penalty based on KL divergence.
+* **[Direct Preference Optimization](https://arxiv.org/abs/2305.18290)**: DPO is another RL algorithm that does not need a reward model, making the RLHF process simpler and more lightweight.
+
+📚 **References**:
+* [An Introduction to Training LLMs using RLHF](https://wandb.ai/ayush-thakur/Intro-RLAIF/reports/An-Introduction-to-Training-LLMs-Using-Reinforcement-Learning-From-Human-Feedback-RLHF---VmlldzozMzYyNjcy) by Ayush Thakur: Explain why RLHF is desirable to reduce bias and increase performance in LLMs.
+* [Illustration RLHF](https://huggingface.co/blog/rlhf) by Hugging Face: Introduction to RLHF with reward model training and fine-tuning with reinforcement learning.
+* [StackLLaMA](https://huggingface.co/blog/stackllama) by Hugging Face: Tutorial to efficiently align a LLaMA model with RLHF using the transformers library.
+* [Fine-tune Llama 2 with DPO](https://huggingface.co/blog/dpo-trl) by Hugging Face: Tutorial to fine-tune a Llama 2 model with DPO.
+* [LLM Training: RLHF and Its Alternatives](https://substack.com/profile/27393275-sebastian-raschka-phd) by Sebastian Rashcka: Overview of the RLHF process and alternatives like RLAIF.
+
+---
+### 6. Evaluation
+
+Evaluating LLMs is an undervalued part of the pipeline, which is time-consuming and moderately reliable. Your downstream task should dictate what you want to evaluate, but always remember the Goodhart's law: "when a measure becomes a target, it ceases to be a good measure."
+
+* **Traditional metrics**: Metrics like perplexity and BLEU score are not popular as they were because they're flawed in most contexts. It is still important to understand them and when they can be applied.
+* **General benchmarks**: Based on the [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), the [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) is the main benchmark for general-purpose LLMs (like ChatGPT). There are other popular benchmarks like [BigBench](https://github.com/google/BIG-bench), [MT-Bench](https://arxiv.org/abs/2306.05685), etc.
+* **Task-specific benchmarks**: Tasks like summarization, translation, question answering have dedicated benchmarks, metrics, and even subdomains (medical, financial, etc.), such as [PubMedQA](https://pubmedqa.github.io/) for biomedical question answering.
+* **Human evaluation**: The most reliable evaluation is the acceptance rate by users or comparisons made by humans. If you want to know if a model performs well, the simplest but surest way is to use it yourself.
+
+📚 **References**:
+* [Perplexity of fixed-length models](https://huggingface.co/docs/transformers/perplexity) by Hugging Face: Overview of perplexity with code to implement it with the transformers library.
+* [BLEU at your own risk](https://towardsdatascience.com/evaluating-text-output-in-nlp-bleu-at-your-own-risk-e8609665a213) by Rachael Tatman: Overview of the BLEU score and its many issues with examples.
+* [A Survey on Evaluation of LLMs](https://arxiv.org/abs/2307.03109) by Chang et al.: Comprehensive paper about what to evaluate, where to evaluate, and how to evaluate.
+* [Chatbot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard) by lmsys: Elo rating of general-purpose LLMs, based on comparisons made by humans.
+
+---
+### 7. Quantization
+
+Quantization is the process of converting the weights (and activations) of a model using a lower precision. For example, weights stored using 16 bits can be converted into a 4-bit representation. This technique has become increasingly important to reduce the computational and memory costs associated to LLMs.
+
+* **Base techniques**: Learn the different levels of precision (FP32, FP16, INT8, etc.) and how to perform naïve quantization with absmax and zero-point techniques.
+* **GGUF and llama.cpp**: Originally designed to run on CPUs, [llama.cpp](https://github.com/ggerganov/llama.cpp) and the GGUF format have become the most popular tools to run LLMs on consumer-grade hardware.
+* **GPTQ and EXL2**: [GPTQ](https://arxiv.org/abs/2210.17323) and, more specifically, the [EXL2](https://github.com/turboderp/exllamav2) format offer an incredible speed but can only run on GPUs. Models also take a long time to be quantized.
+* **AWQ**: This new format is more accurate than GPTQ (lower perplexity) but uses a lot more VRAM and is not necessarily faster.
+
+📚 **References**:
+* [Introduction to quantization](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html): Overview of quantization, absmax and zero-point quantization, and LLM.int8() with code.
+* [Quantize Llama models with llama.cpp](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html): Tutorial on how to quantize a Llama 2 model using llama.cpp and the GGUF format.
+* [4-bit LLM Quantization with GPTQ](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html): Tutorial on how to quantize an LLM using the GPTQ algorithm with AutoGPTQ.
+* [ExLlamaV2: The Fastest Library to Run LLMs](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html): Guide on how to quantize a Mistral model using the EXL2 format and run it with the ExLlamaV2 library.
+* [Understanding Activation-Aware Weight Quantization](https://medium.com/friendliai/understanding-activation-aware-weight-quantization-awq-boosting-inference-serving-efficiency-in-10bb0faf63a8) by FriendliAI: Overview of the AWQ technique and its benefits.
+
+---
+### 8. Inference optimization
+
+* **Flash Attention**: Optimization of the attention mechanism to transform its complexity from quadratic to linear, speeding up both training and inference.
+* **Key-value cache**: Understand the key-value cache and the improvements introduced in [Multi-Query Attention](https://arxiv.org/abs/1911.02150) (MQA) and [Grouped-Query Attention](https://arxiv.org/abs/2305.13245) (GQA).
+* **Speculative decoding**: Use a small model to produce drafts that are then reviewed by a larger model to speed up text generation.
+* **Positional encoding**: Understand positional encodings in transformers, particularly relative schemes like [RoPE](https://arxiv.org/abs/2104.09864), [ALiBi](https://arxiv.org/abs/2108.12409), and [YaRN](https://arxiv.org/abs/2309.00071). (Not directly connected to inference optimization but to longer context windows.)
+
+📚 **References**:
+* [GPU Inference](https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one) by Hugging Face: Explain how to optimize inference on GPUs.
+* [Optimizing LLMs for Speed and Memory](https://huggingface.co/docs/transformers/main/en/llm_tutorial_optimization) by Hugging Face: Explain three main techniques to optimize speed and memory, namely quantization, Flash Attention, and architectural innovations.
+* [Assisted Generation](https://huggingface.co/blog/assisted-generation) by Hugging Face: HF's version of speculative decoding, it's an interesting blog post about how it works with code to implement it.
+* [Extending the RoPE](https://blog.eleuther.ai/yarn/) by EleutherAI: Article that summarizes the different position-encoding techniques.
+* [Extending Context is Hard... but not Impossible](https://kaiokendev.github.io/context) by kaiokendev: This blog post introduces the SuperHOT technique and provides an excellent survey of related work.
+
+## 👷 The LLM Engineer
+
+W.I.P.
+
+### Contributions
+
+Feel free to raise a pull request or contact me if you think other topics should be mentioned or the current architecture could be improved.
 
 ### Acknowledgements
 
