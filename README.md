@@ -2,9 +2,9 @@
 
 The LLM course is divided into three parts:
 
-1. 🧩 **LLM Fundamentals**: this part covers essential knowledge about mathematics, Python, and neural networks.
-2. 🧑‍🔬 **The LLM Scientist**: this part focuses on learning how to build the best possible LLMs using the latest techniques
-3. 👷 **The LLM Engineer**: this part focuses on how to create LLM-based solutions and deploy them.
+1. 🧩 **LLM Fundamentals** covers essential knowledge about mathematics, Python, and neural networks.
+2. 🧑‍🔬 **The LLM Scientist** focuses on learning how to build the best possible LLMs using the latest techniques
+3. 👷 **The LLM Engineer** focuses on how to create LLM-based solutions and deploy them.
 
 ## Notebooks
 
@@ -150,7 +150,7 @@ Pre-training is a very long and costly process, which is why this is not the foc
 * [LLMDataHub](https://github.com/Zjh-819/LLMDataHub) by Junhao Zhao: Curated list of datasets for pre-training, fine-tuning, and RLHF.
 * [Training a causal language model from scratch](https://huggingface.co/learn/nlp-course/chapter7/6?fw=pt) by Hugging Face: Pre-train a GPT-2 model from scratch using the transformers library.
 * [TinyLlama](https://github.com/jzhang38/TinyLlama) by Zhang et al.: Check this project to get a good understanding of how a Llama model is trained from scratch.
-* [Causal language modeling](# Causal language modeling) by Hugging Face: Explain the difference between causal and masked language modeling and how to quickly fine-tune a DistilGPT-2 model.
+* [Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling) by Hugging Face: Explain the difference between causal and masked language modeling and how to quickly fine-tune a DistilGPT-2 model.
 * [Chinchilla's wild implications](https://www.lesswrong.com/posts/6Fpvch8RR29qLEWNH/chinchilla-s-wild-implications) by nostalgebraist: Discuss the scaling laws and explain what they mean to LLMs in general.
 * [BLOOM](https://bigscience.notion.site/BLOOM-BigScience-176B-Model-ad073ca07cdf479398d5f95d88e218c4) by BigScience: Notion pages that describes how the BLOOM model was built, with a lot of useful information about the engineering part and the problems that were encountered.
 * [OPT-175 Logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) by Meta: Research logs showing what went wrong and what went right. Useful if you're planning to pre-train a very large language model (in this case, 175B parameters).
