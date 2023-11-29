@@ -18,8 +18,10 @@ A list of notebooks and articles related to large language models.
 | Fine-tune Llama 2 in Google Colab | Fine-tune a Llama 2 model on an HF dataset and upload it to the HF Hub. | [Tweet](https://twitter.com/maximelabonne/status/1681791164083576833) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | Introduction to Weight Quantization | Large language model optimization using 8-bit quantization. | [Article](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html) | <a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | 4-bit LLM Quantization using GPTQ | Quantize your own open-source LLMs to run them on consumer hardware. | [Article](https://mlabonne.github.io/blog/4bit_quantization/) | <a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Quantize Llama models with GGML and llama.cpp | Quantize Llama 2 models with llama.cpp and upload GGUF to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| ExLlamaV2: The Fastest Library to Run LLMs | Quantize and run EXL2 models and upload them to the HF Hub. | [Article]() | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| Quantize Llama 2 models with GGUF and llama.cpp | Quantize Llama 2 models with llama.cpp and upload GGUF to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| ExLlamaV2: The Fastest Library to Run LLMs | Quantize and run EXL2 models and upload them to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune a Mistral-7b model with DPO | Introduction to RLHF with PPO and DPO. | [Tweet](https://twitter.com/maximelabonne/status/1729936514107290022) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+
 
 ## 🧩 LLM Fundamentals
 
@@ -241,9 +243,10 @@ Quantization is the process of converting the weights (and activations) of a mod
 
 W.I.P.
 
+---
 ### Contributions
 
-Feel free to raise a pull request or contact me if you think other topics should be mentioned or the current architecture could be improved.
+Feel free to contact me if you think other topics should be mentioned or if the current architecture can be improved.
 
 ### Acknowledgements
 
