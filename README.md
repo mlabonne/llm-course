@@ -8,22 +8,34 @@ The LLM course is divided into three parts:
 2. 🧑‍🔬 **The LLM Scientist** focuses on learning how to build the best possible LLMs using the latest techniques
 3. 👷 **The LLM Engineer** focuses on how to create LLM-based solutions and deploy them.
 
-## Notebooks
+## 📝 Notebooks
 
 A list of notebooks and articles related to large language models.
+
+### Fine-tuning
+
+| Notebook | Description | Article | Notebook |
+|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fine-tune Llama 2 in Google Colab | Step-by-step guide to fine-tune your first Llama 2 model. | [Article](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune LLMs with Axolotl | End-to-end guide to the state-of-the-art tool for fine-tuning. | [Article](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html) | W.I.P. |
+| Fine-tune a Mistral-7b model with DPO | Boost the performance of supervised fine-tuned models with DPO. | [Tweet](https://twitter.com/maximelabonne/status/1729936514107290022) | <a href="https://colab.research.google.com/drive/15iFBr1xWgztXvhrj5I9fBv20c7CFOPBE?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+
+### Quantization
+
+| Notebook | Description | Article | Notebook |
+|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. Introduction to Weight Quantization | Large language model optimization using 8-bit quantization. | [Article](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html) | <a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| 2. 4-bit LLM Quantization using GPTQ | Quantize your own open-source LLMs to run them on consumer hardware. | [Article](https://mlabonne.github.io/blog/4bit_quantization/) | <a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| 3. Quantize Llama 2 models with GGUF and llama.cpp | Quantize Llama 2 models with llama.cpp and upload GGUF versions to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+| 4. ExLlamaV2: The Fastest Library to Run LLMs | Quantize and run EXL2 models and upload them to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
+
+### Other
 
 | Notebook | Description | Article | Notebook |
 |---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Decoding Strategies in Large Language Models | A guide to text generation from beam search to nucleus sampling | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | Visualizing GPT-2's Loss Landscape | 3D plot of the loss landscape based on weight pertubations. | [Tweet](https://twitter.com/maximelabonne/status/1667618081844219904) | <a href="https://colab.research.google.com/drive/1Fu1jikJzFxnSPzR_V2JJyDVWWJNXssaL?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
 | Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Llama 2 in Google Colab | Fine-tune a Llama 2 model on an HF dataset and upload it to the HF Hub. | [Tweet](https://twitter.com/maximelabonne/status/1681791164083576833) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Introduction to Weight Quantization | Large language model optimization using 8-bit quantization. | [Article](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html) | <a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| 4-bit LLM Quantization using GPTQ | Quantize your own open-source LLMs to run them on consumer hardware. | [Article](https://mlabonne.github.io/blog/4bit_quantization/) | <a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Quantize Llama 2 models with GGUF and llama.cpp | Quantize Llama 2 models with llama.cpp and upload GGUF to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| ExLlamaV2: The Fastest Library to Run LLMs | Quantize and run EXL2 models and upload them to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune a Mistral-7b model with DPO | Introduction to RLHF with PPO and DPO. | [Tweet](https://twitter.com/maximelabonne/status/1729936514107290022) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="images/colab.svg" alt="Open In Colab"></a> |
-
 
 ## 🧩 LLM Fundamentals
 
@@ -185,7 +197,7 @@ After supervised fine-tuning, RLHF is a step used to align the LLM's answers wit
 
 * **Preference datasets**: These datasets typically contain several answers with some kind of ranking, which makes them more difficult to produce than instruction datasets.
 * [**Proximal Policy Optimization**](https://arxiv.org/abs/1707.06347): This algorithm leverages a reward model that predicts whether a given text is highly ranked by humans. This prediction is then used to optimize the SFT model with a penalty based on KL divergence.
-* **[Direct Preference Optimization](https://arxiv.org/abs/2305.18290)**: DPO is another RL algorithm that does not need a reward model, making the RLHF process simpler and more lightweight.
+* **[Direct Preference Optimization](https://arxiv.org/abs/2305.18290)**: DPO simplifies the process by reframing it as a classification problem. It uses a reference model instead of a reward model (no training needed) and only requires one hyperparameter, making it more stable and efficient.
 
 📚 **References**:
 * [An Introduction to Training LLMs using RLHF](https://wandb.ai/ayush-thakur/Intro-RLAIF/reports/An-Introduction-to-Training-LLMs-Using-Reinforcement-Learning-From-Human-Feedback-RLHF---VmlldzozMzYyNjcy) by Ayush Thakur: Explain why RLHF is desirable to reduce bias and increase performance in LLMs.
