@@ -14,11 +14,11 @@ A list of notebooks and articles related to large language models.
 
 ### Tools
 
-| Notebook | Description | Article | Notebook |
-|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 🧐 LLM AutoEval | Colab notebook to automatically evaluate your LLMs using RunPod | [GitHub](https://github.com/mlabonne/llm-autoeval) | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🥱 LazyMergekit | Colab notebook to automatically merge models using mergekit. | [Tweet](https://twitter.com/maximelabonne/status/1743643451848093941) | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| ⚡ AutoGGUF | Colab notebook to automatically quantize LLMs in GGUF format. | - | <a href="https://colab.research.google.com/drive/1P646NEg33BZy4BfLDNpTz0V0lwIU3CHu?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Notebook | Description | Notebook |
+|----------|-------------|----------|
+| 🧐 [LLM AutoEval](https://github.com/mlabonne/llm-autoeval) | Automatically evaluate your LLMs using RunPod | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🥱 LazyMergekit | Easily merge models using mergekit in one click. | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| ⚡ AutoGGUF | Quantize LLMs in GGUF format in one click. | <a href="https://colab.research.google.com/drive/1P646NEg33BZy4BfLDNpTz0V0lwIU3CHu?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
 ### Fine-tuning
 
