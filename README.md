@@ -5,12 +5,20 @@
 The LLM course is divided into three parts:
 
 1. 🧩 **LLM Fundamentals** covers essential knowledge about mathematics, Python, and neural networks.
-2. 🧑‍🔬 **The LLM Scientist** focuses on learning how to build the best possible LLMs using the latest techniques
-3. 👷 **The LLM Engineer** focuses on how to create LLM-based solutions and deploy them.
+2. 🧑‍🔬 **The LLM Scientist** focuses on building the best possible LLMs using the latest techniques.
+3. 👷 **The LLM Engineer** focuses on creating LLM-based applications and deploying them.
 
 ## 📝 Notebooks
 
 A list of notebooks and articles related to large language models.
+
+### Tools
+
+| Notebook | Description | Article | Notebook |
+|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 🧐 LLM AutoEval | Colab notebook to automatically evaluate your LLMs using RunPod | [GitHub](https://github.com/mlabonne/llm-autoeval) | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🥱 LazyMergekit | Colab notebook to automatically merge models using mergekit. | [Tweet](https://twitter.com/maximelabonne/status/1743643451848093941) | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| ⚡ AutoGGUF | Colab notebook to automatically quantize LLMs in GGUF format. | - | <a href="https://colab.research.google.com/drive/1P646NEg33BZy4BfLDNpTz0V0lwIU3CHu?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
 ### Fine-tuning
 
@@ -33,8 +41,6 @@ A list of notebooks and articles related to large language models.
 
 | Notebook | Description | Article | Notebook |
 |---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 🆕 LLM AutoEval | Automatically evaluate LLMs from a Colab notebook | W.I.P. | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Merge LLMs with Mergekit | Combine multiple LLMs and create your own Frankenstein models | [Tweet](https://twitter.com/maximelabonne/status/1740732104554807676) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | Decoding Strategies in Large Language Models | A guide to text generation from beam search to nucleus sampling | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | Visualizing GPT-2's Loss Landscape | 3D plot of the loss landscape based on weight perturbations. | [Tweet](https://twitter.com/maximelabonne/status/1667618081844219904) | <a href="https://colab.research.google.com/drive/1Fu1jikJzFxnSPzR_V2JJyDVWWJNXssaL?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
@@ -171,14 +177,14 @@ Pre-training is a very long and costly process, which is why this is not the foc
 * [TinyLlama](https://github.com/jzhang38/TinyLlama) by Zhang et al.: Check this project to get a good understanding of how a Llama model is trained from scratch.
 * [Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling) by Hugging Face: Explain the difference between causal and masked language modeling and how to quickly fine-tune a DistilGPT-2 model.
 * [Chinchilla's wild implications](https://www.lesswrong.com/posts/6Fpvch8RR29qLEWNH/chinchilla-s-wild-implications) by nostalgebraist: Discuss the scaling laws and explain what they mean to LLMs in general.
-* [BLOOM](https://bigscience.notion.site/BLOOM-BigScience-176B-Model-ad073ca07cdf479398d5f95d88e218c4) by BigScience: Notion pages that describes how the BLOOM model was built, with a lot of useful information about the engineering part and the problems that were encountered.
+* [BLOOM](https://bigscience.notion.site/BLOOM-BigScience-176B-Model-ad073ca07cdf479398d5f95d88e218c4) by BigScience: Notion page that describes how the BLOOM model was built, with a lot of useful information about the engineering part and the problems that were encountered.
 * [OPT-175 Logbook](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf) by Meta: Research logs showing what went wrong and what went right. Useful if you're planning to pre-train a very large language model (in this case, 175B parameters).
 * [LLM 360](https://www.llm360.ai/): A framework for open-source LLMs with training and data preparation code, data, metrics, and models.
 
 ---
 ### 4. Supervised Fine-Tuning
 
-Pre-trained models are only trained on a next-token prediction task, which is why they're not helpful assistants. SFT allows you to tweak them into responding to instructions. Moreover, it allows you to fine-tune your model on any data (private, not seen by GPT-4, etc.) and use it without having to pay for an API like OpenAI's.
+Pre-trained models are only trained on a next-token prediction task, which is why they're not helpful assistants. SFT allows you to tweak them to respond to instructions. Moreover, it allows you to fine-tune your model on any data (private, not seen by GPT-4, etc.) and use it without having to pay for an API like OpenAI's.
 
 * **Full fine-tuning**: Full fine-tuning refers to training all the parameters in the model. It is not an efficient technique, but it produces slightly better results.
 * [**LoRA**](https://arxiv.org/abs/2106.09685): A parameter-efficient technique (PEFT) based on low-rank adapters. Instead of training all the parameters, we only train these adapters.
@@ -212,7 +218,7 @@ After supervised fine-tuning, RLHF is a step used to align the LLM's answers wit
 ---
 ### 6. Evaluation
 
-Evaluating LLMs is an undervalued part of the pipeline, which is time-consuming and moderately reliable. Your downstream task should dictate what you want to evaluate, but always remember the Goodhart's law: "when a measure becomes a target, it ceases to be a good measure."
+Evaluating LLMs is an undervalued part of the pipeline, which is time-consuming and moderately reliable. Your downstream task should dictate what you want to evaluate, but always remember Goodhart's law: "When a measure becomes a target, it ceases to be a good measure."
 
 * **Traditional metrics**: Metrics like perplexity and BLEU score are not popular as they were because they're flawed in most contexts. It is still important to understand them and when they can be applied.
 * **General benchmarks**: Based on the [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), the [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) is the main benchmark for general-purpose LLMs (like ChatGPT). There are other popular benchmarks like [BigBench](https://github.com/google/BIG-bench), [MT-Bench](https://arxiv.org/abs/2306.05685), etc.
@@ -224,12 +230,11 @@ Evaluating LLMs is an undervalued part of the pipeline, which is time-consuming 
 * [BLEU at your own risk](https://towardsdatascience.com/evaluating-text-output-in-nlp-bleu-at-your-own-risk-e8609665a213) by Rachael Tatman: Overview of the BLEU score and its many issues with examples.
 * [A Survey on Evaluation of LLMs](https://arxiv.org/abs/2307.03109) by Chang et al.: Comprehensive paper about what to evaluate, where to evaluate, and how to evaluate.
 * [Chatbot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard) by lmsys: Elo rating of general-purpose LLMs, based on comparisons made by humans.
-* [LLM AutoEval](https://github.com/mlabonne/llm-autoeval): Automatically evaluate LLMs from a Colab notebook.
 
 ---
 ### 7. Quantization
 
-Quantization is the process of converting the weights (and activations) of a model using a lower precision. For example, weights stored using 16 bits can be converted into a 4-bit representation. This technique has become increasingly important to reduce the computational and memory costs associated to LLMs.
+Quantization is the process of converting the weights (and activations) of a model using a lower precision. For example, weights stored using 16 bits can be converted into a 4-bit representation. This technique has become increasingly important to reduce the computational and memory costs associated with LLMs.
 
 * **Base techniques**: Learn the different levels of precision (FP32, FP16, INT8, etc.) and how to perform naïve quantization with absmax and zero-point techniques.
 * **GGUF and llama.cpp**: Originally designed to run on CPUs, [llama.cpp](https://github.com/ggerganov/llama.cpp) and the GGUF format have become the most popular tools to run LLMs on consumer-grade hardware.
