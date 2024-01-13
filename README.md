@@ -1,6 +1,7 @@
-# 🗣️ Large Language Model Course
-
-<p align="center"><a href="https://twitter.com/maximelabonne">Follow me on X</a> • <a href="https://mlabonne.github.io/blog">Blog</a> • <a href="https://github.com/PacktPublishing/Hands-On-Graph-Neural-Networks-Using-Python">Hands-on GNN</a></p>
+<div align="center">
+  <h1>🗣️ Large Language Model Course</h1>
+  <p align="center"><a href="https://twitter.com/maximelabonne">Follow me on X</a> • <a href="https://mlabonne.github.io/blog">Blog</a> • <a href="https://github.com/PacktPublishing/Hands-On-Graph-Neural-Networks-Using-Python">Hands-on GNN</a></p>
+</div>
 
 The LLM course is divided into three parts:
 
