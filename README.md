@@ -12,7 +12,7 @@ The LLM course is divided into three parts:
 
 A list of notebooks and articles related to large language models.
 
-### Tools
+### LLMOps Tools
 
 | Notebook | Description | Notebook |
 |----------|-------------|----------|
@@ -44,6 +44,9 @@ A list of notebooks and articles related to large language models.
 | Decoding Strategies in Large Language Models | A guide to text generation from beam search to nucleus sampling | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | Visualizing GPT-2's Loss Landscape | 3D plot of the loss landscape based on weight perturbations. | [Tweet](https://twitter.com/maximelabonne/status/1667618081844219904) | <a href="https://colab.research.google.com/drive/1Fu1jikJzFxnSPzR_V2JJyDVWWJNXssaL?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Merge Large Language Models with mergekit | Create your own models easily, no GPU required! | [Article](https://towardsdatascience.com/merge-large-language-models-with-mergekit-2118fb392b54
+) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+
 
 ## 🧩 LLM Fundamentals
 
@@ -92,7 +95,7 @@ Python is a powerful and flexible programming language that's particularly good 
 
 Neural networks are a fundamental part of many machine learning models, particularly in the realm of deep learning. To utilize them effectively, a comprehensive understanding of their design and mechanics is essential.
 
-- **Fundamentals**: This includes understanding the structure of a neural network such as layers, weights, biases, activation functions (sigmoid, tanh, ReLU, etc.)
+- **Fundamentals**: This includes understanding the structure of a neural network such as layers, weights, biases, and activation functions (sigmoid, tanh, ReLU, etc.)
 - **Training and Optimization**: Familiarize yourself with backpropagation and different types of loss functions, like Mean Squared Error (MSE) and Cross-Entropy. Understand various optimization algorithms like Gradient Descent, Stochastic Gradient Descent, RMSprop, and Adam.
 - **Overfitting**: Understand the concept of overfitting (where a model performs well on training data but poorly on unseen data) and learn various regularization techniques (dropout, L1/L2 regularization, early stopping, data augmentation) to prevent it.
 - **Implement a Multilayer Perceptron (MLP)**: Build an MLP, also known as a fully connected network, using PyTorch.
@@ -220,9 +223,9 @@ After supervised fine-tuning, RLHF is a step used to align the LLM's answers wit
 
 Evaluating LLMs is an undervalued part of the pipeline, which is time-consuming and moderately reliable. Your downstream task should dictate what you want to evaluate, but always remember Goodhart's law: "When a measure becomes a target, it ceases to be a good measure."
 
-* **Traditional metrics**: Metrics like perplexity and BLEU score are not popular as they were because they're flawed in most contexts. It is still important to understand them and when they can be applied.
+* **Traditional metrics**: Metrics like perplexity and BLEU score are not as popular as they were because they're flawed in most contexts. It is still important to understand them and when they can be applied.
 * **General benchmarks**: Based on the [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), the [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) is the main benchmark for general-purpose LLMs (like ChatGPT). There are other popular benchmarks like [BigBench](https://github.com/google/BIG-bench), [MT-Bench](https://arxiv.org/abs/2306.05685), etc.
-* **Task-specific benchmarks**: Tasks like summarization, translation, question answering have dedicated benchmarks, metrics, and even subdomains (medical, financial, etc.), such as [PubMedQA](https://pubmedqa.github.io/) for biomedical question answering.
+* **Task-specific benchmarks**: Tasks like summarization, translation, and question answering have dedicated benchmarks, metrics, and even subdomains (medical, financial, etc.), such as [PubMedQA](https://pubmedqa.github.io/) for biomedical question answering.
 * **Human evaluation**: The most reliable evaluation is the acceptance rate by users or comparisons made by humans. If you want to know if a model performs well, the simplest but surest way is to use it yourself.
 
 📚 **References**:
