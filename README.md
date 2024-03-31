@@ -257,8 +257,8 @@ Quantization is the process of converting the weights (and activations) of a mod
 
 📚 **References**:
 * [Introduction to quantization](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html): Overview of quantization, absmax and zero-point quantization, and LLM.int8() with code.
+* [4-bit LLM Quantization with GPTQ](https://mlabonne.github.io/blog/posts/4_bit_Quantization_with_GPTQ.html): Tutorial on how to quantize an LLM using the GPTQ algorithm with AutoGPTQ.
 * [Quantize Llama models with llama.cpp](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html): Tutorial on how to quantize a Llama 2 model using llama.cpp and the GGUF format.
-* [4-bit LLM Quantization with GPTQ](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html): Tutorial on how to quantize an LLM using the GPTQ algorithm with AutoGPTQ.
 * [ExLlamaV2: The Fastest Library to Run LLMs](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html): Guide on how to quantize a Mistral model using the EXL2 format and run it with the ExLlamaV2 library.
 * [Understanding Activation-Aware Weight Quantization](https://medium.com/friendliai/understanding-activation-aware-weight-quantization-awq-boosting-inference-serving-efficiency-in-10bb0faf63a8) by FriendliAI: Overview of the AWQ technique and its benefits.
 
