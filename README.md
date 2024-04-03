@@ -154,6 +154,7 @@ While an in-depth knowledge about the Transformer architecture is not required, 
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar: A visual and intuitive explanation of the Transformer model.
 - [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/) by Jay Alammar: Even more important than the previous article, it is focused on the GPT architecture, which is very similar to Llama's.
 - [LLM Visualization](https://bbycroft.net/llm) by Brendan Bycroft: Incredible 3D visualization of what happens inside of an LLM.
+- [Visual intro to Transformers](https://www.youtube.com/watch?v=wjZofJX0v4M&t=187s) by 3Blue1Brown: Simple easy to understand visual intro to Transformers
 * [nanoGPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) by Andrej Karpathy: A 2h-long YouTube video to reimplement GPT from scratch (for programmers).
 * [Attention? Attention!](https://lilianweng.github.io/posts/2018-06-24-attention/) by Lilian Weng: Introduce the need for attention in a more formal way.
 * [Decoding Strategies in LLMs](https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html): Provide code and a visual introduction to the different decoding strategies to generate text.
