@@ -347,6 +347,7 @@ With RAG, LLMs retrieves contextual documents from a database to improve the acc
 * [LangChain - Q&A with RAG](https://python.langchain.com/docs/use_cases/question_answering/quickstart): Step-by-step tutorial to build a typical RAG pipeline.
 * [LangChain - Memory types](https://python.langchain.com/docs/modules/memory/types/): List of different types of memories with relevant usage.
 * [RAG pipeline - Metrics](https://docs.ragas.io/en/stable/concepts/metrics/index.html): Overview of the main metrics used to evaluate RAG pipelines.
+* [CAMEL - RAG Cookbook](https://docs.camel-ai.org/cookbooks/agents_with_rag.html): Usage of customised and auto RAG pipline with CAMEL. 
 
 ---
 ### 4. Advanced RAG
@@ -365,6 +366,7 @@ Real-life applications can require complex pipelines, including SQL or graph dat
 * [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) by Lilian Weng: More theoretical article about LLM agents.
 * [LangChain - OpenAI's RAG](https://blog.langchain.dev/applying-openai-rag/): Overview of the RAG strategies employed by OpenAI, including post-processing.
 * [DSPy in 8 Steps](https://dspy-docs.vercel.app/docs/building-blocks/solving_your_task): General-purpose guide to DSPy introducing modules, signatures, and optimizers.
+* [CAMEL - Graph RAG](https://docs.camel-ai.org/cookbooks/knowledge_graph.html): Step-by-step tutorial of building graph RAG using CAMEL, powered by the advanced Mistral models.
 
 ---
 ### 5. Inference optimization
