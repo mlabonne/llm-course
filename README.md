@@ -15,7 +15,8 @@
 2. 🧑‍🔬 **The LLM Scientist** focuses on building the best possible LLMs using the latest techniques.
 3. 👷 **The LLM Engineer** focuses on creating LLM-based applications and deploying them.
 
-Based on this course, I wrote the [LLM Engineer's Handbook](https://packt.link/a/9781836200079). It's a hands-on and detailed book that covers an end-to-end LLM application from design to deployment. The LLM course will always stay free but feel free to support my work by purchasing the book.
+> [!NOTE]
+> Based on this course, I wrote the [LLM Engineer's Handbook](https://packt.link/a/9781836200079) with Paul Iuzstin. It's a hands-on and detailed book that covers an end-to-end LLM application from design to deployment. The LLM course will always stay free but feel free to support my work by purchasing the book.
 
 For an interactive version of this course, I created an LLM assistant that will answer questions and test your knowledge in a personalized way on [**HuggingChat**](https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1) or [**ChatGPT**](https://chat.openai.com/g/g-yviLuLqvI-llm-course).
 
