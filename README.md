@@ -347,7 +347,7 @@ With RAG, LLMs retrieve contextual documents from a database to improve the accu
 📚 **References**:
 * [Llamaindex - High-level concepts](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html): Main concepts to know when building RAG pipelines.
 * [Pinecone - Retrieval Augmentation](https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/): Overview of the retrieval augmentation process. 
-* [LangChain - Q&A with RAG](https://python.langchain.com/docs/use_cases/question_answering/quickstart): Step-by-step tutorial to build a typical RAG pipeline.
+* [LangChain - Tutorials](https://python.langchain.com/docs/tutorials/rag/): Build a Retrieval Augmented Generation (RAG) App.
 * [LangChain - Memory types](https://python.langchain.com/docs/modules/memory/types/): List of different types of memories with relevant usage.
 * [RAG pipeline - Metrics](https://docs.ragas.io/en/stable/concepts/metrics/index.html): Overview of the main metrics used to evaluate RAG pipelines.
 
