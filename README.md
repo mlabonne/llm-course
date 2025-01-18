@@ -315,7 +315,7 @@ Running LLMs can be difficult due to high hardware requirements. Depending on yo
 📚 **References**:
 * [Run an LLM locally with LM Studio](https://www.kdnuggets.com/run-an-llm-locally-with-lm-studio) by Nisha Arya: Short guide on how to use LM Studio.
 * [Prompt engineering guide](https://www.promptingguide.ai/) by DAIR.AI: Exhaustive list of prompt techniques with examples
-* [Outlines - Quickstart](https://outlines-dev.github.io/outlines/quickstart/): List of guided generation techniques enabled by Outlines. 
+* [Outlines - Quickstart](https://dottxt-ai.github.io/outlines/latest/quickstart/): List of guided generation techniques enabled by Outlines. 
 * [LMQL - Overview](https://lmql.ai/docs/language/overview.html): Introduction to the LMQL language.
 
 ---
