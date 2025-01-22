@@ -329,7 +329,7 @@ Creating a vector storage is the first step to building a Retrieval Augmented Ge
 * **Vector databases**: Vector databases (like [Chroma](https://www.trychroma.com/), [Pinecone](https://www.pinecone.io/), [Milvus](https://milvus.io/), [FAISS](https://faiss.ai/), [Annoy](https://github.com/spotify/annoy), etc.) are designed to store embedding vectors. They enable efficient retrieval of data that is 'most similar' to a query based on vector similarity.
 
 📚 **References**:
-* [LangChain - Text splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/): List of different text splitters implemented in LangChain.
+* [LangChain - Text splitters](https://python.langchain.com/docs/how_to/#text-splitters): List of different text splitters implemented in LangChain.
 * [Sentence Transformers library](https://www.sbert.net/): Popular library for embedding models.
 * [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard): Leaderboard for embedding models.
 * [The Top 5 Vector Databases](https://www.datacamp.com/blog/the-top-5-vector-databases) by Moez Ali: A comparison of the best and most popular vector databases.
@@ -347,8 +347,8 @@ With RAG, LLMs retrieve contextual documents from a database to improve the accu
 📚 **References**:
 * [Llamaindex - High-level concepts](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html): Main concepts to know when building RAG pipelines.
 * [Pinecone - Retrieval Augmentation](https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/): Overview of the retrieval augmentation process. 
-* [LangChain - Q&A with RAG](https://python.langchain.com/docs/use_cases/question_answering/quickstart): Step-by-step tutorial to build a typical RAG pipeline.
-* [LangChain - Memory types](https://python.langchain.com/docs/modules/memory/types/): List of different types of memories with relevant usage.
+* [LangChain - Q&A with RAG](https://python.langchain.com/docs/tutorials/rag/): Step-by-step tutorial to build a typical RAG pipeline.
+* [LangChain - Memory types](https://python.langchain.com/docs/how_to/chatbots_memory/): List of different types of memories with relevant usage.
 * [RAG pipeline - Metrics](https://docs.ragas.io/en/stable/concepts/metrics/index.html): Overview of the main metrics used to evaluate RAG pipelines.
 
 ---
@@ -363,7 +363,7 @@ Real-life applications can require complex pipelines, including SQL or graph dat
 
 📚 **References**:
 * [LangChain - Query Construction](https://blog.langchain.dev/query-construction/): Blog post about different types of query construction.
-* [LangChain - SQL](https://python.langchain.com/docs/use_cases/qa_structured/sql): Tutorial on how to interact with SQL databases with LLMs, involving Text-to-SQL and an optional SQL agent.
+* [LangChain - SQL](https://python.langchain.com/docs/tutorials/sql_qa/): Tutorial on how to interact with SQL databases with LLMs, involving Text-to-SQL and an optional SQL agent.
 * [Pinecone - LLM agents](https://www.pinecone.io/learn/series/langchain/langchain-agents/): Introduction to agents and tools with different types.
 * [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) by Lilian Weng: A more theoretical article about LLM agents.
 * [LangChain - OpenAI's RAG](https://blog.langchain.dev/applying-openai-rag/): Overview of the RAG strategies employed by OpenAI, including post-processing.
