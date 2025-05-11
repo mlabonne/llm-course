@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://i.imgur.com/iIq2PJu.png" alt="LLM Course">
+<img src="img/banner.png" alt="LLM Course">
   <p align="center">
     𝕏 <a href="https://twitter.com/maximelabonne">Follow me on X</a> • 
     🤗 <a href="https://huggingface.co/mlabonne">Hugging Face</a> • 
@@ -117,7 +117,7 @@ Python is a powerful and flexible programming language that's particularly good 
 
 Neural networks are a fundamental part of many machine learning models, particularly in the realm of deep learning. To utilize them effectively, a comprehensive understanding of their design and mechanics is essential.
 
-- **Fundamentals**: This includes understanding the structure of a neural network such as layers, weights, biases, and activation functions (sigmoid, tanh, ReLU, etc.)
+- **Fundamentals**: This includes understanding the structure of a neural network, such as layers, weights, biases, and activation functions (sigmoid, tanh, ReLU, etc.)
 - **Training and Optimization**: Familiarize yourself with backpropagation and different types of loss functions, like Mean Squared Error (MSE) and Cross-Entropy. Understand various optimization algorithms like Gradient Descent, Stochastic Gradient Descent, RMSprop, and Adam.
 - **Overfitting**: Understand the concept of overfitting (where a model performs well on training data but poorly on unseen data) and learn various regularization techniques (dropout, L1/L2 regularization, early stopping, data augmentation) to prevent it.
 - **Implement a Multilayer Perceptron (MLP)**: Build an MLP, also known as a fully connected network, using PyTorch.
@@ -179,7 +179,7 @@ Pre-training is a computationally intensive and expensive process. While it's no
 
 * **Data preparation**: Pre-training requires massive datasets (e.g., [Llama 3.1](https://arxiv.org/abs/2307.09288) was trained on 15 trillion tokens) that need careful curation, cleaning, deduplication, and tokenization. Modern pre-training pipelines implement sophisticated filtering to remove low-quality or problematic content.
 * **Distributed training**: Combine different parallelization strategies: data parallel (batch distribution), pipeline parallel (layer distribution), and tensor parallel (operation splitting). These strategies require optimized network communication and memory management across GPU clusters.
-* **Training optimization**: Use adaptive learning rates with warm-up, gradient clipping and normalization to prevent explosions, mixed-precision training for memory efficiency, and modern optimizers (AdamW, Lion) with tuned hyperparameters.
+* **Training optimization**: Use adaptive learning rates with warm-up, gradient clipping, and normalization to prevent explosions, mixed-precision training for memory efficiency, and modern optimizers (AdamW, Lion) with tuned hyperparameters.
 * **Monitoring**: Track key metrics (loss, gradients, GPU stats) using dashboards, implement targeted logging for distributed training issues, and set up performance profiling to identify bottlenecks in computation and communication across devices.
 
 📚 **References**:
@@ -204,7 +204,7 @@ Post-training datasets have a precise structure with instructions and answers (s
 📚 **References**:
 * [Synthetic Data Generator](https://huggingface.co/spaces/argilla/synthetic-data-generator) by Argilla: Beginner-friendly way of building datasets using natural language in a Hugging Face space.
 * [LLM Datasets](https://github.com/mlabonne/llm-datasets) by Maxime Labonne: Curated list of datasets and tools for post-training.
-* [NeMo-Curator](https://github.com/NVIDIA/NeMo-Curator) by Nvidia: Dataset preparation and curation framework for pre and post-training data.
+* [NeMo-Curator](https://github.com/NVIDIA/NeMo-Curator) by Nvidia: Dataset preparation and curation framework for pre- and post-training data.
 * [Distilabel](https://distilabel.argilla.io/dev/sections/pipeline_samples/) by Argilla: Framework to generate synthetic data. It also includes interesting reproductions of papers like UltraFeedback.
 * [Semhash](https://github.com/MinishLab/semhash) by MinishLab: Minimalistic library for near-deduplication and decontamination with a distilled embedding model.
 * [Chat Template](https://huggingface.co/docs/transformers/main/en/chat_templating) by Hugging Face: Hugging Face's documentation about chat templates.
@@ -214,7 +214,7 @@ Post-training datasets have a precise structure with instructions and answers (s
 
 SFT turns base models into helpful assistants, capable of answering questions and following instructions. During this process, they learn how to structure answers and reactivate a subset of knowledge learned during pre-training. Instilling new knowledge is possible but superficial: it cannot be used to learn a completely new language. Always prioritize data quality over parameter optimization.
 
-- **Training techniques**: Full fine-tuning updates all model parameters but requires significant compute. Parameter-efficient fine-tuning techniques like LoRA and QLoRA reduce memory requirements by training a small number of adapter parameters while keeping base weights frozen. QLoRA combines 4-bit quantization with LoRA to reduce VRAM usage.
+- **Training techniques**: Full fine-tuning updates all model parameters but requires significant compute. Parameter-efficient fine-tuning techniques like LoRA and QLoRA reduce memory requirements by training a small number of adapter parameters while keeping base weights frozen. QLoRA combines 4-bit quantization with LoRA to reduce VRAM usage. These techniques are all implemented in the most popular fine-tuning frameworks: [TRL](https://huggingface.co/docs/trl/en/index), [Unsloth](https://docs.unsloth.ai/), and [Axolotl](https://axolotl.ai/).
 - **Training parameters**: Key parameters include learning rate with schedulers, batch size, gradient accumulation, number of epochs, optimizer (like 8-bit AdamW), weight decay for regularization, and warmup steps for training stability. LoRA also adds three parameters: rank (typically 16-128), alpha (1-2x rank), and target modules.
 - **Distributed training**: Scale training across multiple GPUs using DeepSpeed or FSDP. DeepSpeed provides three ZeRO optimization stages with increasing levels of memory efficiency through state partitioning. Both methods support gradient checkpointing for memory efficiency.
 - **Monitoring**: Track training metrics including loss curves, learning rate schedules, and gradient norms. Monitor for common issues like loss spikes, gradient explosions, or performance degradation.
@@ -228,19 +228,20 @@ SFT turns base models into helpful assistants, capable of answering questions an
 ---
 ### 5. Preference Alignment
 
-Preference alignment is a second stage in the post-training pipeline, focused on aligning generated answers with human preferences. This stage was designed to tune the tone of LLMs and reduce toxicity and hallucinations. However, it has become increasingly important to also boost their performance and improve usefulness. Unlike SFT, there are many preference alignment algorithms. Here, we'll focus on the two most important ones: DPO and PPO.
+Preference alignment is a second stage in the post-training pipeline, focused on aligning generated answers with human preferences. This stage was designed to tune the tone of LLMs and reduce toxicity and hallucinations. However, it has become increasingly important to also boost their performance and improve usefulness. Unlike SFT, there are many preference alignment algorithms. Here, we'll focus on the three most important ones: DPO, GRPO, and PPO.
 
 - **Rejection sampling**: For each prompt, use the trained model to generate multiple responses, and score them to infer chosen/rejected answers. This creates on-policy data, where both responses come from the model being trained, improving alignment stability.
-- **[Direct Preference Optimization](https://arxiv.org/abs/2305.18290)** Directly optimizes the policy to maximize the likelihood of chosen responses over rejected ones. It doesn't require reward modeling, which makes it more computationally efficient than PPO but slightly worse in terms of quality.
-- [**Proximal Policy Optimization**](https://arxiv.org/abs/1707.06347): Iteratively updates policy to maximize reward while staying close to initial behavior. It uses a reward model to score responses and requires careful tuning of hyperparameters including learning rate, batch size, and PPO clip range.
-- **Monitoring**: In addition to SFT metrics, you want to maximize the margin between chosen and preferred answers. The accuracy should also gradually increase until it plateaus.
+- **[Direct Preference Optimization](https://arxiv.org/abs/2305.18290)** Directly optimizes the policy to maximize the likelihood of chosen responses over rejected ones. It doesn't require reward modeling, which makes it more computationally efficient than RL techniques but slightly worse in terms of quality. Great for creating chat models.
+- **Reward model**: Train a reward model with human feedback to predict metrics like human preferences. It can leverage frameworks like [TRL](https://huggingface.co/docs/trl/en/index), [verl](https://github.com/volcengine/verl), and [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) for scalable training.
+- **Reinforcement Learning**: RL techniques like [GRPO](https://arxiv.org/abs/2402.03300) and [PPO](https://arxiv.org/abs/1707.06347) iteratively update a policy to maximize rewards while staying close to the initial behavior. They can use a reward model or reward functions to score responses. They tend to be computationally expensive and require careful tuning of hyperparameters, including learning rate, batch size, and clip range. Ideal for creating reasoning models.
 
 📚 **References**:
 * [Illustrating RLHF](https://huggingface.co/blog/rlhf) by Hugging Face: Introduction to RLHF with reward model training and fine-tuning with reinforcement learning.
-* [LLM Training: RLHF and Its Alternatives](https://magazine.sebastianraschka.com/p/llm-training-rlhf-and-its-alternatives) by Sebastian Rashcka: Overview of the RLHF process and alternatives like RLAIF.
+* [LLM Training: RLHF and Its Alternatives](https://magazine.sebastianraschka.com/p/llm-training-rlhf-and-its-alternatives) by Sebastian Raschka: Overview of the RLHF process and alternatives like RLAIF.
 * [Preference Tuning LLMs](https://huggingface.co/blog/pref-tuning) by Hugging Face: Comparison of the DPO, IPO, and KTO algorithms to perform preference alignment.
-* [Fine-tune Mistral-7b with DPO](https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html) by Maxime Labonne: Tutorial to fine-tune a Mistral-7b model with DPO and reproduce [NeuralHermes-2.5](https://huggingface.co/mlabonne/NeuralHermes-2.5-Mistral-7B).
-* [DPO Wandb logs](https://wandb.ai/alexander-vishnevskiy/dpo/reports/TRL-Original-DPO--Vmlldzo1NjI4MTc4) by Alexander Vishnevskiy: It shows you the main metrics to track and the trends you should expect.
+* [Fine-tune with DPO](https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html) by Maxime Labonne: Tutorial to fine-tune a Mistral-7b model with DPO and reproduce [NeuralHermes-2.5](https://huggingface.co/mlabonne/NeuralHermes-2.5-Mistral-7B).
+* [Fine-tune with GRPO](https://huggingface.co/learn/llm-course/en/chapter12/5) by Maxime Labonne: Practical exercise to fine-tune a small model with GRPO.
+* [DPO Wandb logs](https://wandb.ai/alexander-vishnevskiy/dpo/reports/TRL-Original-DPO--Vmlldzo1NjI4MTc4) by Alexander Vishnevskiy: It shows you the main DPO metrics to track and the trends you should expect.
 
 ---
 ### 6. Evaluation
@@ -258,7 +259,6 @@ Reliably evaluating LLMs is a complex but essential task guiding data generation
 * [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) by EleutherAI: A popular framework for evaluating LLMs using automated benchmarks.
 * [Lighteval](https://github.com/huggingface/lighteval) by Hugging Face: Alternative evaluation framework that also includes model-based evaluations.
 * [Chatbot Arena](https://lmarena.ai/) by LMSYS: Elo rating of general-purpose LLMs, based on comparisons made by humans (human evaluation).
-
 
 ---
 ### 7. Quantization
@@ -285,8 +285,8 @@ Here are notable topics that didn't fit into other categories. Some are establis
 
 * **Model merging**: Merging trained models has become a popular way of creating performant models without any fine-tuning. The popular [mergekit](https://github.com/cg123/mergekit) library implements the most popular merging methods, like SLERP, [DARE](https://arxiv.org/abs/2311.03099), and [TIES](https://arxiv.org/abs/2311.03099).
 * **Multimodal models**: These models (like [CLIP](https://openai.com/research/clip), [Stable Diffusion](https://stability.ai/stable-image), or [LLaVA](https://llava-vl.github.io/)) process multiple types of inputs (text, images, audio, etc.) with a unified embedding space, which unlocks powerful applications like text-to-image.
-* **Interpretability**: Mechanistic interpretability techniques like Sparse Autoencoders (SAEs) made remarkable progress to provide insights about the inner workings of LLMs. This has also been applied with techniques such as abliteration, which allow you to modify the behavior of models without training.
-* **Test-time compute**: Scaling the compute budget during test time requires numerous calls and involves specialized models like a Process Reward Model (PRM). Iterative steps with precise scoring significantly improve performance for complex reasoning tasks.
+* **Interpretability**: Mechanistic interpretability techniques like Sparse Autoencoders (SAEs) have made remarkable progress to provide insights about the inner workings of LLMs. This has also been applied with techniques such as abliteration, which allow you to modify the behavior of models without training.
+* **Test-time compute**: Reasoning models trained with RL techniques can be further improved by scaling the compute budget during test time. It can involve multiple calls, MCTS, or specialized models like a Process Reward Model (PRM). Iterative steps with precise scoring significantly improve performance for complex reasoning tasks.
 
 📚 **References**:
 * [Merge LLMs with mergekit](https://mlabonne.github.io/blog/posts/2024-01-08_Merge_LLMs_with_mergekit.html) by Maxime Labonne: Tutorial about model merging using mergekit.
@@ -302,15 +302,14 @@ This section of the course focuses on learning how to build LLM-powered applicat
 
 ![](img/roadmap_engineer.png)
 
-
 ### 1. Running LLMs
 
 Running LLMs can be difficult due to high hardware requirements. Depending on your use case, you might want to simply consume a model through an API (like GPT-4) or run it locally. In any case, additional prompting and guidance techniques can improve and constrain the output for your applications.
 
-* **LLM APIs**: APIs are a convenient way to deploy LLMs. This space is divided between private LLMs ([OpenAI](https://platform.openai.com/), [Google](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview), [Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api), [Cohere](https://docs.cohere.com/docs), etc.) and open-source LLMs ([OpenRouter](https://openrouter.ai/), [Hugging Face](https://huggingface.co/inference-api), [Together AI](https://www.together.ai/), etc.).
-* **Open-source LLMs**: The [Hugging Face Hub](https://huggingface.co/models) is a great place to find LLMs. You can directly run some of them in [Hugging Face Spaces](https://huggingface.co/spaces), or download and run them locally in apps like [LM Studio](https://lmstudio.ai/) or through the CLI with [llama.cpp](https://github.com/ggerganov/llama.cpp) or [Ollama](https://ollama.ai/).
+* **LLM APIs**: APIs are a convenient way to deploy LLMs. This space is divided between private LLMs ([OpenAI](https://platform.openai.com/), [Google](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview), [Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api), etc.) and open-source LLMs ([OpenRouter](https://openrouter.ai/), [Hugging Face](https://huggingface.co/inference-api), [Together AI](https://www.together.ai/), etc.).
+* **Open-source LLMs**: The [Hugging Face Hub](https://huggingface.co/models) is a great place to find LLMs. You can directly run some of them in [Hugging Face Spaces](https://huggingface.co/spaces), or download and run them locally in apps like [LM Studio](https://lmstudio.ai/) or through the CLI with [llama.cpp](https://github.com/ggerganov/llama.cpp) or [ollama](https://ollama.ai/).
 * **Prompt engineering**: Common techniques include zero-shot prompting, few-shot prompting, chain of thought, and ReAct. They work better with bigger models, but can be adapted to smaller ones.
-* **Structuring outputs**: Many tasks require a structured output, like a strict template or a JSON format. Libraries like [LMQL](https://lmql.ai/), [Outlines](https://github.com/outlines-dev/outlines), [Guidance](https://github.com/guidance-ai/guidance), etc. can be used to guide the generation and respect a given structure.
+* **Structuring outputs**: Many tasks require a structured output, like a strict template or a JSON format. Libraries like [Outlines](https://github.com/outlines-dev/outlines) can be used to guide the generation and respect a given structure. Some APIs also support structured output generation natively using JSON schemas.
 
 📚 **References**:
 * [Run an LLM locally with LM Studio](https://www.kdnuggets.com/run-an-llm-locally-with-lm-studio) by Nisha Arya: Short guide on how to use LM Studio.
@@ -325,27 +324,28 @@ Creating a vector storage is the first step to building a Retrieval Augmented Ge
 
 * **Ingesting documents**: Document loaders are convenient wrappers that can handle many formats: PDF, JSON, HTML, Markdown, etc. They can also directly retrieve data from some databases and APIs (GitHub, Reddit, Google Drive, etc.).
 * **Splitting documents**: Text splitters break down documents into smaller, semantically meaningful chunks. Instead of splitting text after *n* characters, it's often better to split by header or recursively, with some additional metadata.
-* **Embedding models**: Embedding models convert text into vector representations. It allows for a deeper and more nuanced understanding of language, which is essential to perform semantic search.
+* **Embedding models**: Embedding models convert text into vector representations. Picking task-specific models significantly improves performance for semantic search and RAG.
 * **Vector databases**: Vector databases (like [Chroma](https://www.trychroma.com/), [Pinecone](https://www.pinecone.io/), [Milvus](https://milvus.io/), [FAISS](https://faiss.ai/), [Annoy](https://github.com/spotify/annoy), etc.) are designed to store embedding vectors. They enable efficient retrieval of data that is 'most similar' to a query based on vector similarity.
 
 📚 **References**:
 * [LangChain - Text splitters](https://python.langchain.com/docs/how_to/#text-splitters): List of different text splitters implemented in LangChain.
 * [Sentence Transformers library](https://www.sbert.net/): Popular library for embedding models.
 * [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard): Leaderboard for embedding models.
-* [The Top 5 Vector Databases](https://www.datacamp.com/blog/the-top-5-vector-databases) by Moez Ali: A comparison of the best and most popular vector databases.
+* [The Top 7 Vector Databases](https://www.datacamp.com/blog/the-top-5-vector-databases) by Moez Ali: A comparison of the best and most popular vector databases.
 
 ---
 ### 3. Retrieval Augmented Generation
 
 With RAG, LLMs retrieve contextual documents from a database to improve the accuracy of their answers. RAG is a popular way of augmenting the model's knowledge without any fine-tuning.
 
-* **Orchestrators**: Orchestrators (like [LangChain](https://python.langchain.com/docs/get_started/introduction), [LlamaIndex](https://docs.llamaindex.ai/en/stable/), [FastRAG](https://github.com/IntelLabs/fastRAG), etc.) are popular frameworks to connect your LLMs with tools, databases, memories, etc. and augment their abilities.
-* **Retrievers**: User instructions are not optimized for retrieval. Different techniques (e.g., multi-query retriever, [HyDE](https://arxiv.org/abs/2212.10496), etc.) can be applied to rephrase/expand them and improve performance.
+* **Orchestrators**: Orchestrators like [LangChain](https://python.langchain.com/docs/get_started/introduction) and [LlamaIndex](https://docs.llamaindex.ai/en/stable/) are popular frameworks to connect your LLMs with tools and databases. The Model Context Protocol (MCP) introduces a new standard to pass data and context to models across providers.
+* **Retrievers**: Query rewriters and generative retrievers like CoRAG and HyDE enhance search by transforming user queries. Multi-vector and hybrid retrieval methods combine embeddings with keyword signals to improve recall and precision.
 * **Memory**: To remember previous instructions and answers, LLMs and chatbots like ChatGPT add this history to their context window. This buffer can be improved with summarization (e.g., using a smaller LLM), a vector store + RAG, etc.
-* **Evaluation**: We need to evaluate both the document retrieval (context precision and recall) and generation stages (faithfulness and answer relevancy). It can be simplified with tools [Ragas](https://github.com/explodinggradients/ragas/tree/main) and [DeepEval](https://github.com/confident-ai/deepeval).
+* **Evaluation**: We need to evaluate both the document retrieval (context precision and recall) and generation stages (faithfulness and answer relevancy). It can be simplified with tools [Ragas](https://github.com/explodinggradients/ragas/tree/main) and [DeepEval](https://github.com/confident-ai/deepeval) (assessing quality).
 
 📚 **References**:
 * [Llamaindex - High-level concepts](https://docs.llamaindex.ai/en/stable/getting_started/concepts.html): Main concepts to know when building RAG pipelines.
+* [Model Context Protocol](https://modelcontextprotocol.io/introduction): Introduction to MCP with motivate, architecture, and quick starts.
 * [Pinecone - Retrieval Augmentation](https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/): Overview of the retrieval augmentation process. 
 * [LangChain - Q&A with RAG](https://python.langchain.com/docs/tutorials/rag/): Step-by-step tutorial to build a typical RAG pipeline.
 * [LangChain - Memory types](https://python.langchain.com/docs/how_to/chatbots_memory/): List of different types of memories with relevant usage.
@@ -357,7 +357,7 @@ With RAG, LLMs retrieve contextual documents from a database to improve the accu
 Real-life applications can require complex pipelines, including SQL or graph databases, as well as automatically selecting relevant tools and APIs. These advanced techniques can improve a baseline solution and provide additional features.
 
 * **Query construction**: Structured data stored in traditional databases requires a specific query language like SQL, Cypher, metadata, etc. We can directly translate the user instruction into a query to access the data with query construction.
-* **Agents and tools**: Agents augment LLMs by automatically selecting the most relevant tools to provide an answer. These tools can be as simple as using Google or Wikipedia, or more complex like a Python interpreter or Jira. 
+* **Tools**: Agents augment LLMs by automatically selecting the most relevant tools to provide an answer. These tools can be as simple as using Google or Wikipedia, or more complex like a Python interpreter or Jira. 
 * **Post-processing**: Final step that processes the inputs that are fed to the LLM. It enhances the relevance and diversity of documents retrieved with re-ranking, [RAG-fusion](https://github.com/Raudaschl/rag-fusion), and classification.
 * **Program LLMs**: Frameworks like [DSPy](https://github.com/stanfordnlp/dspy) allow you to optimize prompts and weights based on automated evaluations in a programmatic way.
 
@@ -370,7 +370,23 @@ Real-life applications can require complex pipelines, including SQL or graph dat
 * [DSPy in 8 Steps](https://dspy-docs.vercel.app/docs/building-blocks/solving_your_task): General-purpose guide to DSPy introducing modules, signatures, and optimizers.
 
 ---
-### 5. Inference optimization
+### 5. Agents
+
+An LLM agent can autonomously perform tasks by taking actions based on reasoning about its environment, typically through the use of tools or functions to interact with external systems.
+
+* **Agent fundamentals**: Agents operate using thoughts (internal reasoning to decide what to do next), action (executing tasks, often by interacting with external tools), and observation (analyzing feedback or results to refine the next step).
+* **Agent frameworks**: Agent development can be streamlined using different frameworks like [LangGraph](https://www.langchain.com/langgraph) (design and visualization of workflows), [LlamaIndex](https://docs.llamaindex.ai/en/stable/use_cases/agents/) (data-augmented agents with RAG), or [smolagents](https://github.com/huggingface/smolagents) (beginner-friendly, lightweight option).
+* **Multi-agents**: More experimental frameworks include collaboration between different agents, such as [CrewAI](https://docs.crewai.com/introduction) (role-based team orchestration), [AutoGen](https://github.com/microsoft/autogen) (conversation-driven multi-agent systems), and [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) (production-ready with strong OpenAI model integration).
+
+📚 **References**:
+* [Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction): Popular course about AI agents made by Hugging Face.
+* [AI Agents Comparison](https://langfuse.com/blog/2025-03-19-ai-agent-comparison) by Jannik Maierhöfer: Comparison of features across different open-source AI agent frameworks.
+* [LangGraph](https://langchain-ai.github.io/langgraph/concepts/why-langgraph/): Overview of how to build AI agents with LangGraph.
+* [LlamaIndex Agents](https://docs.llamaindex.ai/en/stable/use_cases/agents/): Uses cases and resources to build agents with LlamaIndex.
+* [smolagents](https://huggingface.co/docs/smolagents/index): Documentation with a guided tour, how-to guides, and more conceptual articles.
+
+---
+### 6. Inference optimization
 
 Text generation is a costly process that requires expensive hardware. In addition to quantization, various techniques have been proposed to maximize throughput and reduce inference costs.
 
@@ -385,7 +401,7 @@ Text generation is a costly process that requires expensive hardware. In additio
 * [Assisted Generation](https://huggingface.co/blog/assisted-generation) by Hugging Face: HF's version of speculative decoding, it's an interesting blog post about how it works with code to implement it.
 
 ---
-### 6. Deploying LLMs
+### 7. Deploying LLMs
 
 Deploying LLMs at scale is an engineering feat that can require multiple clusters of GPUs. In other scenarios, demos and local apps can be achieved with a much lower complexity. 
 
@@ -401,7 +417,7 @@ Deploying LLMs at scale is an engineering feat that can require multiple cluster
 * [Optimizing latence](https://hamel.dev/notes/llm/inference/03_inference.html) by Hamel Husain: Comparison of TGI, vLLM, CTranslate2, and mlc in terms of throughput and latency.
 
 ---
-### 7. Securing LLMs
+### 8. Securing LLMs
 
 In addition to traditional security problems associated with software, LLMs have unique weaknesses due to the way they are trained and prompted.
 
@@ -414,6 +430,7 @@ In addition to traditional security problems associated with software, LLMs have
 * [Prompt Injection Primer](https://github.com/jthack/PIPE) by Joseph Thacker: Short guide dedicated to prompt injection for engineers.
 * [LLM Security](https://llmsecurity.net/) by [@llm_sec](https://twitter.com/llm_sec): Extensive list of resources related to LLM security.
 * [Red teaming LLMs](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/red-teaming) by Microsoft: Guide on how to perform red teaming with LLMs.
+
 ---
 ## Acknowledgements
 
