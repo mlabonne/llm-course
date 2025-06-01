@@ -448,8 +448,5 @@ Special thanks to:
 *Disclaimer: I am not affiliated with any sources listed here.*
 
 ---
-<p align="center">
-  <a href="https://star-history.com/#mlabonne/llm-course&Date">
-    <img src="https://api.star-history.com/svg?repos=mlabonne/llm-course&type=Date" alt="Star History Chart">
-  </a>
-</p>
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mlabonne/llm-course&type=Date)](https://www.star-history.com/#mlabonne/llm-course&Date)
