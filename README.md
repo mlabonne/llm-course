@@ -261,6 +261,7 @@ Reliably evaluating LLMs is a complex but essential task guiding data generation
 * [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) by EleutherAI: A popular framework for evaluating LLMs using automated benchmarks.
 * [Lighteval](https://github.com/huggingface/lighteval) by Hugging Face: Alternative evaluation framework that also includes model-based evaluations.
 * [Chatbot Arena](https://lmarena.ai/) by LMSYS: Elo rating of general-purpose LLMs, based on comparisons made by humans (human evaluation).
+* [LLM Stats](https://llm-stats.com/): Analyze and compare API models across benchmarks, pricing, and capabilities. Built on community data.
 
 ---
 ### 7. Quantization
