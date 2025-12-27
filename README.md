@@ -134,7 +134,8 @@ Neural networks are a fundamental part of many machine learning models, particul
 - [freeCodeCamp - Deep Learning Crash Course](https://www.youtube.com/watch?v=VyWAvY2CF9c): This video efficiently introduces all the most important concepts in deep learning.
 - [Fast.ai - Practical Deep Learning](https://course.fast.ai/): Free course designed for people with coding experience who want to learn about deep learning.
 - [Patrick Loeber - PyTorch Tutorials](https://www.youtube.com/playlist?list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4): Series of videos for complete beginners to learn about PyTorch.
-
+- [Welch Labs - Neural Network Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU): Playlist about neural networks, This playlist was recommended by 3blue1brown (Grant Sanderson).
+- [Welch Labs - Learning To See](https://www.youtube.com/playlist?list=PLiaHhY2iBX9ihLasvE8BKnS2Xg8AhY6iV): Playlist about Machine Learning evolution, This playlist was recommended by 3blue1brown (Grant Sanderson).
 ---
 
 ### 4. Natural Language Processing (NLP)
