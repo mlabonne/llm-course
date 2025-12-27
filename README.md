@@ -6,6 +6,17 @@
     💻 <a href="https://mlabonne.github.io/blog">Blog</a> • 
     📙 <a href="https://packt.link/a/9781836200079">LLM Engineer's Handbook</a>
   </p>
+  <p align="center">
+    <!-- Keep these links. Translations will automatically update with the README. -->
+    <a href="https://zdoc.app/de/mlabonne/llm-course">Deutsch</a> | 
+    <a href="https://zdoc.app/es/mlabonne/llm-course">Español</a> | 
+    <a href="https://zdoc.app/fr/mlabonne/llm-course">français</a> | 
+    <a href="https://zdoc.app/ja/mlabonne/llm-course">日本語</a> | 
+    <a href="https://zdoc.app/ko/mlabonne/llm-course">한국어</a> | 
+    <a href="https://zdoc.app/pt/mlabonne/llm-course">Português</a> | 
+    <a href="https://zdoc.app/ru/mlabonne/llm-course">Русский</a> | 
+    <a href="https://zdoc.app/zh/mlabonne/llm-course">中文</a>
+  </p>
 </div>
 <br/>
 
