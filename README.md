@@ -92,7 +92,7 @@ Before mastering machine learning, it is important to understand the fundamental
 
 - [3Blue1Brown - The Essence of Linear Algebra](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab): Series of videos that give a geometric intuition to these concepts.
 - [StatQuest with Josh Starmer - Statistics Fundamentals](https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9): Offers simple and clear explanations for many statistical concepts.
-- [AP Statistics Intuition by Ms Aerin](https://automata88.medium.com/list/cacc224d5e7d): List of Medium articles that provide the intuition behind every probability distribution.
+- [Seeing Theory](https://seeing-theory.brown.edu/): A visual introduction to probability and statistics from Brown University.
 - [Immersive Linear Algebra](https://immersivemath.com/ila/learnmore.html): Another visual interpretation of linear algebra.
 - [Khan Academy - Linear Algebra](https://www.khanacademy.org/math/linear-algebra): Great for beginners as it explains the concepts in a very intuitive way.
 - [Khan Academy - Calculus](https://www.khanacademy.org/math/calculus-1): An interactive course that covers all the basics of calculus.
